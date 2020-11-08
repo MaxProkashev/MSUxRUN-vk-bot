@@ -1,0 +1,19 @@
+# github.com/SevereCloud/vksdk/v2 v2.6.1
+## explicit
+github.com/SevereCloud/vksdk/v2
+github.com/SevereCloud/vksdk/v2/api
+github.com/SevereCloud/vksdk/v2/api/params
+github.com/SevereCloud/vksdk/v2/events
+github.com/SevereCloud/vksdk/v2/internal
+github.com/SevereCloud/vksdk/v2/longpoll-bot
+github.com/SevereCloud/vksdk/v2/object
+# golang.org/x/text v0.3.4
+golang.org/x/text/encoding
+golang.org/x/text/encoding/charmap
+golang.org/x/text/encoding/internal
+golang.org/x/text/encoding/internal/identifier
+golang.org/x/text/runes
+golang.org/x/text/transform
+# gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776
+## explicit
+gopkg.in/yaml.v3
