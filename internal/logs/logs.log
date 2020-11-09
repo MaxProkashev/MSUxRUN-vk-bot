@@ -1,0 +1,119 @@
+----------------------------------------
+INFO:    2020/11/09 01:21:52 main.go:55: SUCCES get config
+----------------------------------------
+[INFO]    2020/11/09 01:28:54 main.go:55: SUCCES get config
+----------------------------------------
+[INFO]    2020/11/09 01:29:07 main.go:55: SUCCES get config
+----------------------------------------
+[INFO]    2020/11/09 01:29:15 main.go:55: SUCCES get config
+----------------------------------------
+[INFO]    2020/11/09 01:30:01 logs.go:42: [SUCCES] get config
+----------------------------------------
+----------------------------------------
+[ERROR]   2020/11/09 01:36:57 logs.go:47: [SUCCES] can`t read ./config.yaml file
+[INFO]    2020/11/09 01:36:57 logs.go:42: [SUCCES] get config
+----------------------------------------
+[ERROR]   2020/11/09 01:37:39 logs.go:47: [SUCCES] can`t read ./config.yaml file
+----------------------------------------
+[ERROR]   2020/11/09 01:38:33 logs.go:47: [ERROR] can`t read ./config.yaml file %!w(*os.PathError=&{open ./config.yaml 2})
+----------------------------------------
+[ERROR]   2020/11/09 01:39:00 logs.go:47: [ERROR] can`t read ./config.yaml file open ./config.yaml: The system cannot find the file specified.
+----------------------------------------
+[ERROR]   2020/11/09 01:39:30 logs.go:47: [ERROR] open ./config.yaml: The system cannot find the file specified.
+----------------------------------------
+[ERROR]   2020/11/09 01:40:46 C:/Users/pmpav/Documents/GitHub/MSUxRUN-vk-bot/internal/logs/logs.go:47: [ERROR] open ./config.yaml: The system cannot find the file specified.
+----------------------------------------
+[ERROR]   2020/11/09 01:40:56 logs.go:47: [ERROR] open ./config.yaml: The system cannot find the file specified.
+----------------------------------------
+[ERROR]   2020/11/09 01:41:52 config.go:52: [ERROR] open ./config.yaml: The system cannot find the file specified.
+[ERROR]   2020/11/09 01:41:52 logs.go:47: [ERROR] open ./config.yaml: The system cannot find the file specified.
+----------------------------------------
+[ERROR]   2020/11/09 01:42:50 config.go:52: open ./config.yaml: The system cannot find the file specified.
+[ERROR]   2020/11/09 01:42:50 logs.go:47: [ERROR] open ./config.yaml: The system cannot find the file specified.
+----------------------------------------
+[ERROR]   2020/11/09 01:43:48 config.go:52: open ./config.yaml: The system cannot find the file specified.
+----------------------------------------
+[INFO]    2020/11/09 01:44:33 logs.go:42: [SUCCES] get config
+----------------------------------------
+[INFO]    2020/11/09 01:47:23 logs.go:42: [SUCCES] get config
+----------------------------------------
+[ERROR]   2020/11/09 01:48:29 config.go:22: open ./config.yaml: The system cannot find the file specified.
+----------------------------------------
+[ERROR]   2020/11/09 01:48:30 config.go:22: open ./config.yaml: The system cannot find the file specified.
+----------------------------------------
+[INFO]    2020/11/09 01:49:19 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 01:49:19 main.go:67: group[0].id = 200132006
+----------------------------------------
+[INFO]    2020/11/09 01:50:00 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 01:50:00 logs.go:42: [SUCCES] group[0].id = 200132006
+----------------------------------------
+[INFO]    2020/11/09 01:53:21 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 01:53:21 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 01:53:21 logs.go:42: [SUCCES] start long poll
+----------------------------------------
+[INFO]    2020/11/09 01:54:02 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 01:54:02 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 01:54:02 logs.go:42: [SUCCES] start long poll &{GroupID:200132006 Server:https://lp.vk.com/wh200132006 Key:f108862adc3fa0de22d5b2598bd50779ab3667e9 Ts:142 Wait:25 VK:0xc000052000 Client:0xca5620 funcFullResponseList:[] inShutdown:0 FuncList:{messageNew:[0x9e5d80] messageReply:[] messageEdit:[] messageAllow:[] messageDeny:[] messageTypingState:[] messageEvent:[] photoNew:[] photoCommentNew:[] photoCommentEdit:[] photoCommentRestore:[] photoCommentDelete:[] audioNew:[] videoNew:[] videoCommentNew:[] videoCommentEdit:[] videoCommentRestore:[] videoCommentDelete:[] wallPostNew:[] wallRepost:[] wallReplyNew:[] wallReplyEdit:[] wallReplyRestore:[] wallReplyDelete:[] boardPostNew:[] boardPostEdit:[] boardPostRestore:[] boardPostDelete:[] marketCommentNew:[] marketCommentEdit:[] marketCommentRestore:[] marketCommentDelete:[] marketOrderNew:[] marketOrderEdit:[] groupLeave:[] groupJoin:[] userBlock:[] userUnblock:[] pollVoteNew:[] groupOfficersEdit:[] groupChangeSettings:[] groupChangePhoto:[] vkpayTransaction:[] leadFormsNew:[] appPayload:[] messageRead:[] likeAdd:[] likeRemove:[] special:map[] eventsList:[message_new] goroutine:false}}
+----------------------------------------
+[INFO]    2020/11/09 01:56:11 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 01:56:11 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 01:56:11 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 02:05:07 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 02:05:07 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 02:05:07 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[ERROR]   2020/11/09 02:05:14 logs.go:52: [MESS] from:205818633 text: sdaklfn
+----------------------------------------
+[INFO]    2020/11/09 02:05:34 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 02:05:34 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 02:05:34 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 02:05:36 logs.go:52: [MESS] from:205818633 text: sdaflk
+[INFO]    2020/11/09 02:05:37 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 02:10:05 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 02:10:05 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 02:10:05 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 02:10:09 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 02:15:37 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 02:15:37 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 02:15:37 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 02:15:42 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 02:15:50 logs.go:52: [MESS] from:205818633 text: sdfl
+[INFO]    2020/11/09 02:15:52 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 02:16:02 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 02:16:02 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 02:16:02 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 02:16:07 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 02:16:22 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 02:16:22 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 02:16:22 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 02:16:25 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 02:18:21 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 02:18:21 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 02:18:21 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 02:18:26 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 02:28:23 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 02:28:23 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 02:28:23 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 02:28:31 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 02:29:32 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 02:29:32 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 02:29:33 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 02:29:34 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 02:30:13 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 02:30:13 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 02:30:13 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 02:30:14 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:06:38 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:06:39 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:06:39 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:06:58 logs.go:52: [MESS] from:205818633 text: nmnm
+[INFO]    2020/11/09 09:07:03 logs.go:52: [MESS] from:205818633 text: ping

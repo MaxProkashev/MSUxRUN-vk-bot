@@ -4,6 +4,8 @@ import (
 	"context"
 	"log"
 	"msuxrun-bot/internal/config"
+	"msuxrun-bot/internal/logs"
+	"os"
 
 	"github.com/SevereCloud/vksdk/v2/api"
 	"github.com/SevereCloud/vksdk/v2/api/params"
@@ -11,44 +13,12 @@ import (
 	"github.com/SevereCloud/vksdk/v2/longpoll-bot"
 )
 
-const packageErr = "ERROR cmd/bot/main.go::" // package standart error
-
-type packErr struct {
-	funcName string // name func where error
-	comment  string // comment to error
-	err      error  // err
-}
-
-func (p *packErr) addComment(comm string) {
-	p.comment = comm
-}
-
-func errInit(pe packErr) {
-	log.Fatalf("%s%s ==> %s <== COMMENT: %s",
-		packageErr,
-		pe.funcName,
-		pe.err.Error(),
-		pe.comment,
-	)
-}
-
-var (
-	stdErr packErr
-	// standart output error for main func
-	stdFuncErr = func(err error) packErr {
-		return packErr{
-			funcName: "MAIN",
-			comment:  "no comment",
-			err:      err,
-		}
-	}
-)
-
 func main() {
-	var err error
+	//! start loggers
+	logs.InitLoggers()
+
 	//? get configuration for bot
 	conf := config.GetProjectConfig()
-	conf.StartLog()
 
 	//? create new vk api
 	vk := api.NewVK(conf.Token)
@@ -56,25 +26,23 @@ func main() {
 	//? get information about the group
 	group, err := vk.GroupsGetByID(nil)
 	if err != nil {
-		stdErr = stdFuncErr(err)
-		stdErr.addComment("can`t get info about group")
-		errInit(stdErr)
+		logs.ErrorLogger.Printf("can`t get info about group")
+		os.Exit(1)
 	}
 	for i, gr := range group {
-		log.Printf("group[%d].id = %d", i, gr.ID)
+		logs.Succes("group[%d].id = %d", i, gr.ID)
 	}
 
 	//? initializing Long Poll in conf.GroupID
 	lp, err := longpoll.NewLongPoll(vk, conf.GroupID)
 	if err != nil {
-		stdErr = stdFuncErr(err)
-		stdErr.addComment("can`t get info about group")
-		errInit(stdErr)
+		logs.ErrorLogger.Printf("could`t init long poll in group_id = %d", conf.GroupID)
+		os.Exit(1)
 	}
 
 	//? new message event
 	lp.MessageNew(func(_ context.Context, obj events.MessageNewObject) {
-		log.Printf("%d: %s", obj.Message.PeerID, obj.Message.Text)
+		logs.Mess("from:%d text: %s", obj.Message.PeerID, obj.Message.Text)
 
 		if obj.Message.Text == "ping" {
 			b := params.NewMessagesSendBuilder()
@@ -90,10 +58,9 @@ func main() {
 	})
 
 	//? run bot Long Poll
-	log.Println("Start Long Poll")
+	logs.Succes("start long poll with gr_id=%d, serv=%s, wait=%d", lp.GroupID, lp.Server, lp.Wait)
 	if err := lp.Run(); err != nil {
-		stdErr = stdFuncErr(err)
-		stdErr.addComment("can`t run long poll")
-		errInit(stdErr)
+		logs.ErrorLogger.Printf("could`t start long poll")
+		os.Exit(1)
 	}
 }
