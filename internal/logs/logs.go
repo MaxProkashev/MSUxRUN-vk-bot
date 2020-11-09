@@ -11,7 +11,7 @@ const (
 	warn = "[WARNING] "
 	errs = "[ERROR]   "
 
-	fileLogs = "./internal/logs/logs.log"
+	fileLogs = "./internal/logs/logs.log" // where save log
 )
 
 var (
@@ -42,12 +42,27 @@ func Succes(format string, v ...interface{}) {
 	InfoLogger.Printf("[SUCCES] %s", fmt.Sprintf(format, v...))
 }
 
+// Mess job in INFO log with comment
+func Mess(format string, v ...interface{}) {
+	InfoLogger.Printf("[MESS] %s", fmt.Sprintf(format, v...))
+}
+
+// DB job in INFO log with comment
+func DB(format string, v ...interface{}) {
+	InfoLogger.Printf("[DB] %s", fmt.Sprintf(format, v...))
+}
+
 // Err job in ERROR log with comment
 func Err(format string, v ...interface{}) {
 	ErrorLogger.Printf("%s", fmt.Sprintf(format, v...))
 }
 
-// Mess job in INFO log with comment
-func Mess(format string, v ...interface{}) {
-	InfoLogger.Printf("[MESS] %s", fmt.Sprintf(format, v...))
+// DBErr job in ERROR log with comment
+func DBErr(format string, v ...interface{}) {
+	ErrorLogger.Printf("[DBERR] %s", fmt.Sprintf(format, v...))
+}
+
+// Warn job in WARN log with comment
+func Warn(format string, v ...interface{}) {
+	WarningLogger.Printf("%s", fmt.Sprintf(format, v...))
 }

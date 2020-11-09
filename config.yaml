@@ -1,2 +1,31 @@
-"token": "0404aebfdffa0dfe135cf2734763c453f6b1f16ee6a1292d22efde29029b743eb82ddf19e4566600b802a"
-"group_id": 200132006
+token: "0404aebfdffa0dfe135cf2734763c453f6b1f16ee6a1292d22efde29029b743eb82ddf19e4566600b802a"
+std_port: "8888"
+db_url: "postgres://thuvvkbysdmrto:8f875f3d91062664612de7db35b32023324f589847073ab8255d2b44a51c7d1d@ec2-3-210-23-22.compute-1.amazonaws.com:5432/d474g3qokdhkke"
+group_id: 200132006
+
+main_kyeboard:
+  - row:
+      - label: "ПН 19:00"
+        payload: "mo"
+        color: "secondary"
+      - label: "ВТ 19:30"
+        payload: "tu"
+        color: "secondary"
+  - row:
+      - label: "СР 19:00"
+        payload: "we"
+        color: "secondary"
+      - label: "ЧТ 19:30"
+        payload: "th"
+        color: "secondary"
+  - row:
+      - label: "ПТ 19:00"
+        payload: "fr"
+        color: "secondary"
+      - label: "ВС 19:00"
+        payload: "su"
+        color: "secondary"
+  - row:
+      - label: "Расписание"
+        payload: "Расписание"
+        color: "primary"

@@ -1,10 +1,12 @@
 package config
 
 import (
+	"database/sql"
 	"io/ioutil"
 	"msuxrun-bot/internal/logs"
 	"os"
 
+	_ "github.com/lib/pq" // pq driver for database/sql
 	"gopkg.in/yaml.v3"
 )
 
@@ -15,7 +17,31 @@ const (
 // Config project
 type Config struct {
 	Token   string `yaml:"token"`
+	PORT    string `yaml:"std_port"`
+	DBURL   string `yaml:"db_url"`
 	GroupID int    `yaml:"group_id"`
+
+	MainKyeboard []struct {
+		Row []struct {
+			Label   string `yaml:"label"`
+			Payload string `yaml:"payload"`
+			Color   string `yaml:"color"`
+		} `yaml:"row"`
+	} `yaml:"main_kyeboard"`
+
+	DB *sql.DB
+}
+
+// OpenDB heroku
+func (c *Config) OpenDB() Config {
+	db, err := sql.Open("postgres", c.DBURL)
+	if err != nil {
+		logs.ErrorLogger.Printf("could`t open db")
+		os.Exit(1)
+	}
+	logs.Succes("open db")
+	c.DB = db
+	return *c
 }
 
 func errLog(err error) {
@@ -38,5 +64,6 @@ func GetProjectConfig() (config Config) {
 	}
 
 	logs.Succes("get config")
+
 	return config
 }

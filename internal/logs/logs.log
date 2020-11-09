@@ -117,3 +117,926 @@ INFO:    2020/11/09 01:21:52 main.go:55: SUCCES get config
 [INFO]    2020/11/09 09:06:39 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
 [INFO]    2020/11/09 09:06:58 logs.go:52: [MESS] from:205818633 text: nmnm
 [INFO]    2020/11/09 09:07:03 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:17:33 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:17:33 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:17:33 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:17:36 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:29:56 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:29:56 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:29:56 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:29:59 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:31:11 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:31:11 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:31:12 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:31:16 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:46:40 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:46:40 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:46:40 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:46:42 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:47:17 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:47:18 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:47:18 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:47:19 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:47:48 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:47:52 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:47:52 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:47:52 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:48:56 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:48:57 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:48:57 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:49:03 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:50:22 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:50:23 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:50:23 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:50:37 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:51:14 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:51:14 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:51:14 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:51:15 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:52:16 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:52:16 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:52:16 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:52:21 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:53:40 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:53:40 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:53:40 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:53:42 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 09:54:08 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:54:08 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:54:08 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:54:14 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 09:54:17 logs.go:52: [MESS] from:205818633 text: hello
+----------------------------------------
+[INFO]    2020/11/09 09:56:38 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:56:39 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:56:39 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:56:40 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 09:56:42 logs.go:52: [MESS] from:205818633 text: hello
+----------------------------------------
+[INFO]    2020/11/09 09:57:36 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:57:37 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:57:37 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:57:39 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 09:57:42 logs.go:52: [MESS] from:205818633 text: hello
+----------------------------------------
+[INFO]    2020/11/09 09:58:33 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:58:34 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:58:34 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:58:35 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 09:58:36 logs.go:52: [MESS] from:205818633 text: hello
+----------------------------------------
+[INFO]    2020/11/09 09:59:37 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 09:59:38 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 09:59:38 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 09:59:39 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 09:59:40 logs.go:52: [MESS] from:205818633 text: hello
+----------------------------------------
+[INFO]    2020/11/09 10:01:24 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:01:25 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:01:25 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 10:01:26 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 10:01:28 logs.go:52: [MESS] from:205818633 text: hello
+----------------------------------------
+[INFO]    2020/11/09 10:17:51 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:17:51 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:17:51 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 10:19:00 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:19:00 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:19:00 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 10:24:31 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:24:31 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:24:31 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 10:25:08 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:25:08 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:25:08 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[ERROR]   2020/11/09 10:30:36 config.go:28: yaml: line 3: did not find expected key
+----------------------------------------
+[INFO]    2020/11/09 10:40:15 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:40:15 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:40:15 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 10:40:59 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:40:59 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:40:59 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 10:42:55 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:42:55 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:42:55 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 10:43:44 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:43:44 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:43:44 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 10:44:58 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:44:58 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:44:58 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 10:47:03 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:47:03 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:47:03 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 10:49:46 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:49:46 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:49:46 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 10:52:55 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:52:55 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:52:55 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 10:53:08 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 10:53:13 logs.go:52: [MESS] from:205818633 text: ПН 19:00
+[INFO]    2020/11/09 10:53:14 logs.go:52: [MESS] from:205818633 text: ВТ 19:30
+[INFO]    2020/11/09 10:53:16 logs.go:52: [MESS] from:205818633 text: ВТ 19:30
+----------------------------------------
+[INFO]    2020/11/09 10:53:42 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:53:42 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:53:42 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 10:53:53 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 10:53:59 logs.go:52: [MESS] from:205818633 text: ПН 19:00
+[INFO]    2020/11/09 10:54:02 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 10:54:06 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 10:54:38 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:54:38 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:54:38 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 10:54:40 logs.go:52: [MESS] from:205818633 text: ПН 19:00
+[INFO]    2020/11/09 10:54:42 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 10:54:55 logs.go:52: [MESS] from:205818633 text: ВТ 19:30
+[INFO]    2020/11/09 10:54:58 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 10:55:00 logs.go:52: [MESS] from:205818633 text: ВС 19:00
+----------------------------------------
+[INFO]    2020/11/09 10:56:22 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:56:22 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:56:22 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 10:56:26 logs.go:52: [MESS] from:205818633 text: ping
+----------------------------------------
+[INFO]    2020/11/09 10:56:48 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 10:56:48 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 10:56:48 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 10:56:50 logs.go:52: [MESS] from:205818633 text: ping
+[INFO]    2020/11/09 10:56:54 logs.go:52: [MESS] from:205818633 text: ВТ 19:30
+[INFO]    2020/11/09 10:56:55 logs.go:52: [MESS] from:205818633 text: ПН 19:00
+----------------------------------------
+[INFO]    2020/11/09 11:21:45 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 11:21:46 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 11:21:46 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[ERROR]   2020/11/09 11:36:36 main.go:24: port must be set
+----------------------------------------
+[WARNING] 2020/11/09 11:44:45 logs.go:57: [MESS] could`t fet heroku port by env, set port = 8888
+[INFO]    2020/11/09 11:44:45 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 11:44:45 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 11:44:45 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 12:15:37 logs.go:42: [SUCCES] get config
+[ERROR]   2020/11/09 12:15:37 main.go:34: can`t get info about group
+----------------------------------------
+[INFO]    2020/11/09 12:16:12 logs.go:42: [SUCCES] get config
+[ERROR]   2020/11/09 12:16:12 main.go:34: can`t get info about group
+----------------------------------------
+[INFO]    2020/11/09 12:16:27 logs.go:42: [SUCCES] get config
+[ERROR]   2020/11/09 12:16:27 main.go:34: can`t get info about group
+----------------------------------------
+[INFO]    2020/11/09 12:19:57 logs.go:42: [SUCCES] get config
+[ERROR]   2020/11/09 12:19:57 main.go:34: can`t get info about group
+----------------------------------------
+[WARNING] 2020/11/09 12:31:07 config.go:52: could`t get heroku db url by env, set db empty
+[INFO]    2020/11/09 12:31:07 logs.go:42: [SUCCES] get config
+[ERROR]   2020/11/09 12:31:07 heroku.go:25: could`t open db
+----------------------------------------
+[WARNING] 2020/11/09 12:31:52 config.go:52: could`t get heroku db url by env, set db empty
+[INFO]    2020/11/09 12:31:52 logs.go:42: [SUCCES] get config
+[ERROR]   2020/11/09 12:31:52 heroku.go:25: could`t open db
+----------------------------------------
+[INFO]    2020/11/09 12:41:34 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 12:41:34 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 12:41:34 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 12:41:46 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 12:41:47 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 12:41:47 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 12:46:36 logs.go:42: [SUCCES] get config
+[ERROR]   2020/11/09 12:46:36 config.go:38: could`t open db
+----------------------------------------
+[INFO]    2020/11/09 12:47:09 logs.go:42: [SUCCES] get config
+[ERROR]   2020/11/09 12:47:09 config.go:40: could`t open db
+----------------------------------------
+[INFO]    2020/11/09 12:47:29 logs.go:42: [SUCCES] get config
+[ERROR]   2020/11/09 12:47:29 config.go:38: could`t open db
+----------------------------------------
+[INFO]    2020/11/09 12:47:51 logs.go:42: [SUCCES] get config
+[ERROR]   2020/11/09 12:47:51 config.go:40: could`t open db
+----------------------------------------
+[INFO]    2020/11/09 12:48:46 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 12:48:46 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 12:48:46 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 12:48:46 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 12:52:52 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 12:52:52 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 12:52:52 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 12:52:52 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 13:10:49 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 13:10:50 logs.go:42: [SUCCES] open db
+----------------------------------------
+[INFO]    2020/11/09 13:12:52 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 13:12:52 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 13:12:54 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 13:12:54 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 13:26:12 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 13:26:12 logs.go:42: [SUCCES] open db
+[ERROR]   2020/11/09 13:26:13 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 13:26:14 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 13:26:14 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 13:27:03 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 13:27:03 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 13:27:04 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 13:27:04 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 13:27:05 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 13:30:45 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 13:30:45 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 13:30:46 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 13:30:47 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 13:30:47 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 13:30:47 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 13:33:12 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 13:33:13 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 13:33:15 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 13:33:15 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 13:33:15 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 13:33:32 logs.go:47: [MESS] from:205818633, text: sald
+[INFO]    2020/11/09 13:33:39 logs.go:47: [MESS] from:205818633, text: ping
+[INFO]    2020/11/09 13:35:24 logs.go:47: [MESS] from:235132693, text: Hello dude
+[INFO]    2020/11/09 13:35:36 logs.go:47: [MESS] from:235132693, text: What’s going on?
+[INFO]    2020/11/09 13:35:50 logs.go:47: [MESS] from:235132693, text: Have you done English?
+----------------------------------------
+[INFO]    2020/11/09 13:38:23 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 13:38:24 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 13:38:25 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 13:38:25 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 13:38:25 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 13:38:26 logs.go:47: [MESS] from:205818633, text: ping
+[INFO]    2020/11/09 13:38:27 logs.go:47: [MESS] from:205818633, text: sad
+[INFO]    2020/11/09 13:39:45 logs.go:47: [MESS] from:102450512, text: Начать
+----------------------------------------
+[INFO]    2020/11/09 13:40:13 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 13:40:14 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 13:40:15 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 13:40:15 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 13:40:15 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 13:40:40 logs.go:47: [MESS] from:205818633, text: wea,m
+[INFO]    2020/11/09 13:41:06 logs.go:47: [MESS] from:205818633, text: ПТ 19:00
+----------------------------------------
+[INFO]    2020/11/09 13:42:28 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 13:42:29 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 13:42:30 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 13:42:30 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 13:42:30 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 13:42:36 logs.go:47: [MESS] from:205818633, text: СР 19:00, payload: "we"
+[INFO]    2020/11/09 13:42:37 logs.go:47: [MESS] from:205818633, text: sdafk, payload:
+[INFO]    2020/11/09 13:42:39 logs.go:47: [MESS] from:205818633, text: ping, payload:
+----------------------------------------
+[INFO]    2020/11/09 13:59:06 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 13:59:07 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 13:59:08 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 13:59:08 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 13:59:08 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 13:59:12 logs.go:47: [MESS] from:205818633, text: skjdfn, payload:
+----------------------------------------
+[INFO]    2020/11/09 13:59:56 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 13:59:56 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 13:59:57 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 13:59:57 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 13:59:57 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 13:59:58 logs.go:47: [MESS] from:205818633, text: sdlkfm, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:00:26 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:00:26 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:00:27 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:00:27 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:00:27 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:00:29 logs.go:47: [MESS] from:205818633, text: s,dfm, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:01:48 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:01:48 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:01:49 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:01:49 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:01:49 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:01:52 logs.go:47: [MESS] from:205818633, text: sldkfmn, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:10:54 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:10:54 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:10:55 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:10:55 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:10:55 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:11:06 logs.go:47: [MESS] from:205818633, text: dsm, payload:
+[INFO]    2020/11/09 14:11:06 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:11:12 logs.go:47: [MESS] from:205818633, text: sdklfm, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:12:49 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:12:49 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:12:50 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:12:51 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:12:51 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:12:52 logs.go:47: [MESS] from:205818633, text: dlfk, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:14:21 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:14:21 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:14:22 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:14:22 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:14:22 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:14:25 logs.go:47: [MESS] from:205818633, text: dksfjm, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:16:05 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:16:06 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:16:07 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:16:07 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:16:07 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:16:14 logs.go:47: [MESS] from:205818633, text: dlksfm, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:17:44 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:17:44 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:17:45 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:17:45 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:17:45 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:17:47 logs.go:47: [MESS] from:205818633, text: sldkfm, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:18:36 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:18:36 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:18:37 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:18:37 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:18:37 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:18:37 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:18:45 logs.go:47: [MESS] from:205818633, text: dfskl, payload:
+[WARNING] 2020/11/09 14:18:45 logs.go:67: could`t not init user. Reason: pq: column "mo" is of type boolean but expression is of type integer
+----------------------------------------
+[INFO]    2020/11/09 14:19:59 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:20:00 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:20:01 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:20:01 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:20:01 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:20:01 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:20:03 logs.go:47: [MESS] from:205818633, text: sdl;kfm, payload:
+[INFO]    2020/11/09 14:20:03 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:20:08 logs.go:47: [MESS] from:205818633, text: ,dsmf, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:21:55 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:21:55 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:21:56 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:21:56 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:21:56 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:21:56 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+----------------------------------------
+[INFO]    2020/11/09 14:22:17 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:22:17 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:22:18 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:22:18 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:22:18 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:22:18 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:22:18 logs.go:47: [MESS] from:205818633, text: ld;skfm, payload:
+[INFO]    2020/11/09 14:22:19 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:22:22 logs.go:47: [MESS] from:205818633, text: dslkfm, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:23:54 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:23:54 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:23:55 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:23:56 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:23:56 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:23:56 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:24:00 logs.go:47: [MESS] from:205818633, text: slkdfm, payload:
+[INFO]    2020/11/09 14:24:00 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:24:01 logs.go:47: [MESS] from:205818633, text: sldkfm, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:29:43 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:29:43 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:29:44 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:29:44 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:29:44 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:29:45 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:29:48 logs.go:47: [MESS] from:205818633, text: dskfj, payload:
+[INFO]    2020/11/09 14:29:48 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:29:49 logs.go:47: [MESS] from:205818633, text: dlkfmg, payload:
+[ERROR]   2020/11/09 14:29:50 logs.go:62: [DBERR] smth bad with DB. Reason: %!(EXTRA string=sql: expected 6 destination arguments in Scan, not 0)
+----------------------------------------
+[INFO]    2020/11/09 14:31:00 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:31:00 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:31:01 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:31:01 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:31:02 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:31:02 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:31:02 logs.go:47: [MESS] from:205818633, text: sdlkfn, payload:
+[INFO]    2020/11/09 14:31:03 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:31:06 logs.go:47: [MESS] from:205818633, text: dkslmf, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:31:52 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:31:53 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:31:54 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:31:54 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:31:54 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:31:54 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:31:57 logs.go:47: [MESS] from: 205818633, text: kdfjs, payload:
+[INFO]    2020/11/09 14:31:57 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:31:59 logs.go:47: [MESS] from: 205818633, text: dskjfn, payload:
+[ERROR]   2020/11/09 14:31:59 logs.go:62: [DBERR] smth bad with DB. Reason: %!(EXTRA string=sql: expected 1 destination arguments in Scan, not 6)
+----------------------------------------
+[INFO]    2020/11/09 14:34:05 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:34:05 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:34:06 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:34:06 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:34:06 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:34:06 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:34:08 logs.go:47: [MESS] from: 205818633, text: sdjkfn, payload:
+[ERROR]   2020/11/09 14:34:30 logs.go:62: [DBERR] smth bad with DB. Reason: %!(EXTRA string=read tcp 192.168.1.6:62752->3.210.23.22:5432: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.)
+----------------------------------------
+[INFO]    2020/11/09 14:35:13 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:35:13 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:35:14 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:35:14 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:35:14 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:35:14 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:35:20 logs.go:47: [MESS] from: 205818633, text: m,sdfn, payload:
+[INFO]    2020/11/09 14:35:21 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:35:21 logs.go:47: [MESS] from: 205818633, text: lskdafn, payload:
+[ERROR]   2020/11/09 14:35:21 logs.go:62: [DBERR] smth bad with DB. Reason: %!(EXTRA string=sql: expected 1 destination arguments in Scan, not 6)
+----------------------------------------
+[INFO]    2020/11/09 14:35:43 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:35:43 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:35:44 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:35:44 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:35:44 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:35:44 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:36:00 logs.go:47: [MESS] from: 205818633, text: sd,amfn, payload:
+[INFO]    2020/11/09 14:36:01 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:36:01 logs.go:47: [MESS] from: 205818633, text: jksdafn, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:36:29 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:36:29 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:36:31 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:36:33 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:36:33 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:36:33 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:37:10 logs.go:47: [MESS] from: 205818633, text: sakj, payload:
+[INFO]    2020/11/09 14:37:11 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:37:12 logs.go:47: [MESS] from: 205818633, text: sakdn, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:40:00 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:40:00 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:40:01 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:40:01 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:40:01 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:40:01 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:40:02 logs.go:47: [MESS] from: 205818633, text: sd,mf, payload:
+[INFO]    2020/11/09 14:40:05 logs.go:47: [MESS] from: 205818633, text: s,dmf, payload:
+[INFO]    2020/11/09 14:40:07 logs.go:47: [MESS] from: 205818633, text: dskfm, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:45:33 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:45:33 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:45:34 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:45:34 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:45:34 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:45:34 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:45:44 logs.go:47: [MESS] from: 205818633, text: ,smadf, payload:
+[INFO]    2020/11/09 14:45:44 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:45:45 logs.go:47: [MESS] from: 205818633, text: sd,amf, payload:
+[INFO]    2020/11/09 14:45:58 logs.go:47: [MESS] from: 205818633, text: ds,mfn, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:50:54 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:50:54 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:50:55 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:50:55 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:50:56 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:50:56 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:51:01 logs.go:47: [MESS] from: 205818633, text: ,smdfn, payload:
+[INFO]    2020/11/09 14:51:02 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:51:02 logs.go:47: [MESS] from: 205818633, text: sdlfmkn, payload:
+[INFO]    2020/11/09 14:51:10 logs.go:47: [MESS] from: 205818633, text: sad,mf, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:54:03 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:54:03 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:54:04 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:54:04 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:54:05 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:54:05 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:54:05 logs.go:47: [MESS] from: 205818633, text: s,akfj, payload:
+[INFO]    2020/11/09 14:54:06 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:54:06 logs.go:47: [MESS] from: 205818633, text: askjfn, payload:
+[INFO]    2020/11/09 14:54:10 logs.go:47: [MESS] from: 205818633, text: smdfn, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:55:45 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:55:45 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:55:46 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:55:46 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:55:46 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:55:46 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:55:52 logs.go:47: [MESS] from: 205818633, text: fd,msn, payload:
+[INFO]    2020/11/09 14:55:53 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:55:53 logs.go:47: [MESS] from: 205818633, text: slkdfn, payload:
+[INFO]    2020/11/09 14:55:54 logs.go:47: [MESS] from: 205818633, text: sdlakfn, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:57:39 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:57:39 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:57:40 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:57:41 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:57:41 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:57:41 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:57:49 logs.go:47: [MESS] from: 205818633, text: sda,fkm, payload:
+[INFO]    2020/11/09 14:57:50 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:57:50 logs.go:47: [MESS] from: 205818633, text: skdafn, payload:
+[INFO]    2020/11/09 14:57:51 logs.go:47: [MESS] from: 205818633, text: sjdkafn, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:58:37 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:58:37 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:58:38 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:58:38 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:58:39 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:58:39 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:58:41 logs.go:47: [MESS] from: 205818633, text: as,mdn, payload:
+[INFO]    2020/11/09 14:58:41 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:58:42 logs.go:47: [MESS] from: 205818633, text: aslknd, payload:
+[INFO]    2020/11/09 14:58:43 logs.go:47: [MESS] from: 205818633, text: kajsnd, payload:
+----------------------------------------
+[INFO]    2020/11/09 14:59:30 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 14:59:30 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 14:59:31 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 14:59:31 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 14:59:32 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 14:59:32 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 14:59:32 logs.go:47: [MESS] from: 205818633, text: ljanf, payload:
+[INFO]    2020/11/09 14:59:32 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 14:59:39 logs.go:47: [MESS] from: 205818633, text: dsfn, payload:
+[INFO]    2020/11/09 15:00:10 logs.go:47: [MESS] from: 205818633, text: s,dmf, payload:
+----------------------------------------
+[INFO]    2020/11/09 15:01:12 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:01:13 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:01:14 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:01:14 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:01:14 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:01:14 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:01:15 logs.go:47: [MESS] from: 205818633, text: jkslanfd, payload:
+[INFO]    2020/11/09 15:01:15 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 15:01:15 logs.go:47: [MESS] from: 205818633, text: kjsdf, payload:
+----------------------------------------
+[INFO]    2020/11/09 15:01:51 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:01:51 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:01:52 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:01:52 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:01:53 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:01:53 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:01:56 logs.go:47: [MESS] from: 205818633, text: m,n, payload:
+[INFO]    2020/11/09 15:01:56 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 15:01:57 logs.go:47: [MESS] from: 205818633, text: ljn, payload:
+[INFO]    2020/11/09 15:02:00 logs.go:47: [MESS] from: 205818633, text: s,dfmn, payload:
+----------------------------------------
+[INFO]    2020/11/09 15:04:43 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:04:43 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:04:45 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:04:45 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:04:45 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:04:45 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:04:54 logs.go:47: [MESS] from: 205818633, text: s,dmfn, payload:
+[INFO]    2020/11/09 15:04:55 logs.go:52: [DB] new user init id = 205818633
+[WARNING] 2020/11/09 15:04:55 logs.go:67: can`t send message
+[INFO]    2020/11/09 15:04:55 logs.go:47: [MESS] from: 205818633, text: s,dmfn, payload:
+[WARNING] 2020/11/09 15:04:56 logs.go:67: can`t send message
+[INFO]    2020/11/09 15:04:56 logs.go:47: [MESS] from: 205818633, text: 'lk, payload:
+[WARNING] 2020/11/09 15:04:58 logs.go:67: can`t send message
+[INFO]    2020/11/09 15:04:58 logs.go:47: [MESS] from: 205818633, text: ПН 19:00, payload: "mo"
+[WARNING] 2020/11/09 15:04:59 logs.go:67: can`t send message
+[INFO]    2020/11/09 15:04:59 logs.go:47: [MESS] from: 205818633, text: ПН 19:00, payload: "mo"
+[WARNING] 2020/11/09 15:05:00 logs.go:67: can`t send message
+----------------------------------------
+[INFO]    2020/11/09 15:05:30 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:05:30 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:05:31 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:05:31 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:05:32 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:05:32 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:05:34 logs.go:47: [MESS] from: 205818633, text: ,smadfn, payload:
+[INFO]    2020/11/09 15:05:34 logs.go:52: [DB] new user init id = 205818633
+[WARNING] 2020/11/09 15:05:35 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: message is empty or invalid
+[INFO]    2020/11/09 15:05:35 logs.go:47: [MESS] from: 205818633, text: sldamkfn, payload:
+[WARNING] 2020/11/09 15:05:36 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: message is empty or invalid
+[INFO]    2020/11/09 15:05:36 logs.go:47: [MESS] from: 205818633, text: sadlfn, payload:
+[WARNING] 2020/11/09 15:05:37 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: message is empty or invalid
+----------------------------------------
+[INFO]    2020/11/09 15:06:23 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:06:23 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:06:24 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:06:24 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:06:24 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:06:24 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:06:25 logs.go:47: [MESS] from: 205818633, text: лот, payload:
+[INFO]    2020/11/09 15:06:25 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 15:06:30 logs.go:47: [MESS] from: 205818633, text: ывфдла, payload:
+----------------------------------------
+[INFO]    2020/11/09 15:08:31 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:08:31 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:08:32 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:08:32 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:08:33 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:08:33 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:08:34 logs.go:47: [MESS] from: 205818633, text: sadlfn, payload:
+[INFO]    2020/11/09 15:08:35 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 15:08:36 logs.go:47: [MESS] from: 205818633, text: lasnf, payload:
+[INFO]    2020/11/09 15:08:39 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+----------------------------------------
+[INFO]    2020/11/09 15:09:02 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:09:02 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:09:03 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:09:03 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:09:03 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:09:03 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:09:05 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 15:09:05 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 15:09:13 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+----------------------------------------
+[INFO]    2020/11/09 15:10:03 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:10:03 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:10:04 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:10:05 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:10:05 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:10:05 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:10:05 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 15:10:06 logs.go:52: [DB] new user init id = 205818633
+[WARNING] 2020/11/09 15:10:06 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: random_id is a required parameter
+[INFO]    2020/11/09 15:10:08 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[WARNING] 2020/11/09 15:10:09 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: random_id is a required parameter
+[INFO]    2020/11/09 15:10:09 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[WARNING] 2020/11/09 15:10:11 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: random_id is a required parameter
+[INFO]    2020/11/09 15:10:11 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[WARNING] 2020/11/09 15:10:12 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: random_id is a required parameter
+----------------------------------------
+[INFO]    2020/11/09 15:25:21 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:25:21 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:25:22 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:25:22 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:25:22 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:25:22 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:25:38 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 15:25:38 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 15:25:38 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 15:25:40 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 15:25:41 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 15:25:43 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 15:25:44 logs.go:47: [MESS] from: 205818633, text: slkdfm, payload:
+----------------------------------------
+[INFO]    2020/11/09 15:30:22 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:30:22 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:30:23 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:30:23 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:30:23 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:30:23 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:30:29 logs.go:47: [MESS] from: 205818633, text: ldskfm, payload:
+[INFO]    2020/11/09 15:30:29 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 15:30:31 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: {"command":"not_supported_button","button_type":"callback","payload":"\"Расписание\""}
+[INFO]    2020/11/09 15:30:32 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: {"command":"not_supported_button","button_type":"callback","payload":"\"Расписание\""}
+----------------------------------------
+[INFO]    2020/11/09 15:32:13 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:32:13 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:32:14 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:32:15 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:32:15 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:32:15 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:32:16 logs.go:47: [MESS] from: 205818633, text: lkasdm, payload:
+[INFO]    2020/11/09 15:32:16 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 15:32:18 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+----------------------------------------
+[INFO]    2020/11/09 15:33:19 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:33:20 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:33:21 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:33:21 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:33:21 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:33:21 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:33:24 logs.go:47: [MESS] from: 205818633, text: s,dmf, payload:
+[INFO]    2020/11/09 15:33:24 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 15:33:26 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+----------------------------------------
+[INFO]    2020/11/09 15:36:56 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:36:56 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:36:57 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:36:57 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:36:57 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:36:57 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:36:58 logs.go:47: [MESS] from: 205818633, text: s,mdf, payload:
+[INFO]    2020/11/09 15:36:58 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 15:37:02 logs.go:47: [MESS] from: 205818633, text: s,dfmk, payload:
+[INFO]    2020/11/09 15:37:06 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+----------------------------------------
+[INFO]    2020/11/09 15:53:04 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 15:53:04 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 15:53:06 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 15:53:06 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 15:53:06 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 15:53:06 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 15:53:39 logs.go:47: [MESS] from: 205818633, text: ыдвлфа, payload:
+[INFO]    2020/11/09 15:53:39 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 15:53:42 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 15:53:44 logs.go:47: [MESS] from: 205818633, text: ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 15:53:47 logs.go:47: [MESS] from: 205818633, text: ВТ 19:30, payload: "tu"
+----------------------------------------
+[INFO]    2020/11/09 16:08:15 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 16:08:15 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 16:08:17 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 16:08:19 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 16:08:19 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 16:08:19 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 16:08:24 logs.go:47: [MESS] from: 205818633, text: ВТ 19:30, payload: "tu"
+[INFO]    2020/11/09 16:08:25 logs.go:52: [DB] new user init id = 205818633
+[WARNING] 2020/11/09 16:08:25 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: random_id is a required parameter
+[INFO]    2020/11/09 16:08:28 logs.go:47: [MESS] from: 205818633, text: ЧТ 19:30, payload: "th"
+[WARNING] 2020/11/09 16:08:29 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: random_id is a required parameter
+[INFO]    2020/11/09 16:08:37 logs.go:47: [MESS] from: 205818633, text: s,dmf, payload:
+[INFO]    2020/11/09 16:09:41 logs.go:47: [MESS] from: 205818633, text: lkm, payload:
+[INFO]    2020/11/09 16:09:45 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 16:09:46 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 16:09:47 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 16:09:49 logs.go:47: [MESS] from: 205818633, text: ,kdmsf, payload:
+[INFO]    2020/11/09 16:09:50 logs.go:47: [MESS] from: 205818633, text: sadflkm, payload:
+[INFO]    2020/11/09 16:09:52 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 16:09:55 logs.go:47: [MESS] from: 205818633, text: ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 16:09:59 logs.go:47: [MESS] from: 205818633, text: ПН 19:00, payload: "mo"
+----------------------------------------
+[INFO]    2020/11/09 16:13:59 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 16:14:00 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 16:14:01 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 16:14:01 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 16:14:01 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 16:14:01 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 16:14:09 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 16:14:10 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 16:14:12 logs.go:47: [MESS] from: 205818633, text: ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 16:14:15 logs.go:47: [MESS] from: 205818633, text: ВТ 19:30, payload: "tu"
+[INFO]    2020/11/09 16:14:18 logs.go:47: [MESS] from: 205818633, text: СР 19:00, payload: "we"
+[INFO]    2020/11/09 16:14:20 logs.go:47: [MESS] from: 205818633, text: ЧТ 19:30, payload: "th"
+[INFO]    2020/11/09 16:14:23 logs.go:47: [MESS] from: 205818633, text: СР 19:00, payload: "we"
+[INFO]    2020/11/09 16:14:27 logs.go:47: [MESS] from: 205818633, text: ЧТ 19:30, payload: "th"
+[INFO]    2020/11/09 16:14:30 logs.go:47: [MESS] from: 205818633, text: ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 16:14:33 logs.go:47: [MESS] from: 205818633, text: ВТ 19:30, payload: "tu"
+----------------------------------------
+[INFO]    2020/11/09 16:18:48 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 16:18:48 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 16:18:49 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 16:18:49 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 16:18:49 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 16:18:49 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 16:18:55 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 16:18:55 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 16:19:12 logs.go:47: [MESS] from: 205818633, text: ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 16:19:19 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:19:22 logs.go:47: [MESS] from: 205818633, text: ВТ 19:30, payload: "tu"
+[INFO]    2020/11/09 16:19:25 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:19:30 logs.go:47: [MESS] from: 205818633, text: СР 19:00, payload: "we"
+[INFO]    2020/11/09 16:19:33 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:19:36 logs.go:47: [MESS] from: 205818633, text: ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 16:19:39 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:20:59 logs.go:47: [MESS] from: 102450512, text: привет, payload:
+[INFO]    2020/11/09 16:21:00 logs.go:52: [DB] new user init id = 102450512
+[INFO]    2020/11/09 16:21:10 logs.go:47: [MESS] from: 102450512, text: ВТ 19:30, payload: "tu"
+[INFO]    2020/11/09 16:21:15 logs.go:47: [MESS] from: 102450512, text: ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 16:23:26 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:23:31 logs.go:47: [MESS] from: 205818633, text: ВС 19:00, payload: "su"
+[INFO]    2020/11/09 16:24:10 logs.go:47: [MESS] from: 102450512, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 16:24:54 logs.go:47: [MESS] from: 102450512, text: СР 19:00, payload: "we"
+[INFO]    2020/11/09 16:25:10 logs.go:47: [MESS] from: 102450512, text: СР 19:00, payload: "we"
+[INFO]    2020/11/09 16:25:15 logs.go:47: [MESS] from: 102450512, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 16:25:17 logs.go:47: [MESS] from: 102450512, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:25:46 logs.go:47: [MESS] from: 102450512, text: СР 19:00, payload: "we"
+[INFO]    2020/11/09 16:25:49 logs.go:47: [MESS] from: 102450512, text: СР 19:00, payload: "we"
+[INFO]    2020/11/09 16:25:53 logs.go:47: [MESS] from: 102450512, text: ЧТ 19:30, payload: "th"
+[INFO]    2020/11/09 16:25:55 logs.go:47: [MESS] from: 102450512, text: ЧТ 19:30, payload: "th"
+[INFO]    2020/11/09 16:25:58 logs.go:47: [MESS] from: 102450512, text: Расписание, payload: "Расписание"
+----------------------------------------
+[INFO]    2020/11/09 16:29:58 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 16:29:58 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 16:29:59 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 16:29:59 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 16:29:59 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 16:29:59 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 16:30:15 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:30:15 logs.go:52: [DB] new user init id = 205818633
+[WARNING] 2020/11/09 16:30:15 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: message is empty or invalid
+[INFO]    2020/11/09 16:30:17 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[WARNING] 2020/11/09 16:30:18 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: message is empty or invalid
+[INFO]    2020/11/09 16:30:28 logs.go:47: [MESS] from: 205818633, text: ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 16:35:04 logs.go:47: [MESS] from: 102450512, text: СР 19:00, payload: "we"
+[INFO]    2020/11/09 16:35:04 logs.go:52: [DB] new user init id = 102450512
+[INFO]    2020/11/09 16:35:08 logs.go:47: [MESS] from: 102450512, text: ПН 19:00 Общая тренировка, payload: "mo"
+[INFO]    2020/11/09 16:35:13 logs.go:47: [MESS] from: 102450512, text: ПТ 19:00, payload: "fr"
+----------------------------------------
+[INFO]    2020/11/09 16:37:37 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 16:37:37 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 16:37:38 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 16:37:38 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 16:37:39 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 16:37:39 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 16:37:53 logs.go:47: [MESS] from: 205818633, text: ловыа, payload:
+[INFO]    2020/11/09 16:37:53 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 16:37:55 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[WARNING] 2020/11/09 16:37:56 logs.go:67: can`t send message. Reason: api: One of the parameters specified was missing or invalid: message is empty or invalid
+----------------------------------------
+[INFO]    2020/11/09 16:38:48 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 16:38:48 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 16:38:49 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 16:38:49 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 16:38:50 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 16:38:50 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 16:38:58 logs.go:47: [MESS] from: 205818633, text: бь, payload:
+[INFO]    2020/11/09 16:38:58 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 16:39:00 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:39:04 logs.go:47: [MESS] from: 205818633, text: Лонгран СР 19:00, payload: "we"
+[INFO]    2020/11/09 16:39:07 logs.go:47: [MESS] from: 205818633, text: Общая ВТ 19:30, payload: "tu"
+[INFO]    2020/11/09 16:39:10 logs.go:47: [MESS] from: 205818633, text: Общая ЧТ 19:30, payload: "th"
+[INFO]    2020/11/09 16:39:15 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:39:37 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+----------------------------------------
+[INFO]    2020/11/09 16:40:31 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 16:40:31 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 16:40:34 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 16:40:36 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 16:40:37 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 16:40:37 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 16:40:38 logs.go:47: [MESS] from: 205818633, text: старт, payload:
+[INFO]    2020/11/09 16:40:39 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 16:40:43 logs.go:47: [MESS] from: 205818633, text: Лонгран ВС 9:00(9:20), payload: "su"
+[INFO]    2020/11/09 16:40:48 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+----------------------------------------
+[INFO]    2020/11/09 16:41:10 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 16:41:11 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 16:41:12 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 16:41:12 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 16:41:12 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 16:41:12 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 16:41:32 logs.go:47: [MESS] from: 102450512, text: ПН 19:00 Общая тренировка, payload: "mo"
+[INFO]    2020/11/09 16:41:32 logs.go:52: [DB] new user init id = 102450512
+[INFO]    2020/11/09 16:41:34 logs.go:47: [MESS] from: 102450512, text: Лонгран ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 16:41:49 logs.go:47: [MESS] from: 102450512, text: Лонгран ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 16:42:11 logs.go:47: [MESS] from: 102450512, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 16:42:28 logs.go:47: [MESS] from: 102450512, text: хернб, payload:
+[INFO]    2020/11/09 16:42:31 logs.go:47: [MESS] from: 102450512, text: Общая ЧТ 19:30, payload: "th"
+[INFO]    2020/11/09 16:42:34 logs.go:47: [MESS] from: 102450512, text: Общая ЧТ 19:30, payload: "th"
+[INFO]    2020/11/09 16:42:36 logs.go:47: [MESS] from: 102450512, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:43:07 logs.go:47: [MESS] from: 102450512, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 16:43:16 logs.go:47: [MESS] from: 102450512, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 16:43:47 logs.go:47: [MESS] from: 102450512, text: Общая ВТ 19:30, payload: "tu"
+[INFO]    2020/11/09 16:43:58 logs.go:47: [MESS] from: 102450512, text: Общая ВТ 19:30, payload: "tu"
+[INFO]    2020/11/09 16:44:02 logs.go:47: [MESS] from: 102450512, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:44:05 logs.go:47: [MESS] from: 102450512, text: Лонгран ПТ 19:00, payload: "fr"
+[INFO]    2020/11/09 16:44:07 logs.go:47: [MESS] from: 102450512, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:44:47 logs.go:47: [MESS] from: 102450512, text: Лонгран СР 19:00, payload: "we"
+----------------------------------------
+[INFO]    2020/11/09 16:49:24 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 16:49:24 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 16:49:25 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 16:49:25 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 16:49:26 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 16:49:26 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 16:49:32 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:49:32 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 16:49:34 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+----------------------------------------
+[INFO]    2020/11/09 16:59:39 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 16:59:39 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 16:59:40 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 16:59:40 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 16:59:41 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 16:59:41 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 16:59:44 logs.go:47: [MESS] from: 205818633, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 16:59:45 logs.go:52: [DB] new user init id = 205818633
+[INFO]    2020/11/09 16:59:47 logs.go:47: [MESS] from: 205818633, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 17:00:02 logs.go:47: [MESS] from: 102450512, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 17:00:02 logs.go:52: [DB] new user init id = 102450512
+----------------------------------------
+[INFO]    2020/11/09 17:08:32 logs.go:42: [SUCCES] get config
+[INFO]    2020/11/09 17:08:32 logs.go:42: [SUCCES] open db
+[INFO]    2020/11/09 17:08:33 logs.go:52: [DB] drop bot_users table
+[INFO]    2020/11/09 17:08:33 logs.go:52: [DB] create user table
+[INFO]    2020/11/09 17:08:33 logs.go:42: [SUCCES] group[0].id = 200132006
+[INFO]    2020/11/09 17:08:33 logs.go:42: [SUCCES] start long poll with gr_id=200132006, serv=https://lp.vk.com/wh200132006, wait=25
+[INFO]    2020/11/09 17:08:52 logs.go:47: [MESS] from: 102450512, text: Расписание, payload: "Расписание"
+[INFO]    2020/11/09 17:08:53 logs.go:52: [DB] new user init id = 102450512
+[INFO]    2020/11/09 17:08:55 logs.go:47: [MESS] from: 102450512, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 17:08:58 logs.go:47: [MESS] from: 102450512, text: Лонгран ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 17:09:01 logs.go:47: [MESS] from: 102450512, text: Мои тренировки, payload: "Мои тренировки"
+[INFO]    2020/11/09 17:09:29 logs.go:47: [MESS] from: 102450512, text: Лонгран ПН 19:00, payload: "mo"
+[INFO]    2020/11/09 17:09:31 logs.go:47: [MESS] from: 102450512, text: Лонгран СР 19:00, payload: "we"
