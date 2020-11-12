@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"log"
 	"math/rand"
 	"msuxrun-bot/internal/config"
 	"msuxrun-bot/internal/db"
@@ -55,7 +56,12 @@ func main() {
 	//! get configuration for project
 	conf = config.GetProjectConfig()
 	//! init DB for bot
-	db.InitDB(conf.DbURL)
+	dbURL := os.Getenv("DATABASE_URL")
+	if dbURL == "" {
+		log.Println("no db uri")
+		os.Exit(5)
+	}
+	db.InitDB(dbURL)
 
 	//? create bot_users table
 	createDrop()
@@ -64,7 +70,12 @@ func main() {
 	callAt(conf.CallH, conf.CallM, conf.CallS)
 
 	// ? create new vk api
-	vk = api.NewVK(conf.Token)
+	token := os.Getenv("VK_TOKEN")
+	if dbURL == "" {
+		log.Println("no vk token")
+		os.Exit(5)
+	}
+	vk = api.NewVK(token)
 
 	// ? get information about the group
 	groups, err := vk.GroupsGetByID(nil)

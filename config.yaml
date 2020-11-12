@@ -1,6 +1,3 @@
-token: "0404aebfdffa0dfe135cf2734763c453f6b1f16ee6a1292d22efde29029b743eb82ddf19e4566600b802a"
-db_url: "postgres://ekwnrdcxfuqexb:a14bcd9cbb50869157293d4530d225271b1f48462903972d085028fa63bef806@ec2-3-214-46-194.compute-1.amazonaws.com:5432/d9rc9g12b2lbbu"
-
 call_h: 19
 call_m: 0
 call_s: 0
