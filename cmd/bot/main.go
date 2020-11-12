@@ -58,7 +58,7 @@ func main() {
 	db.InitDB(conf.DbURL)
 
 	//? create bot_users table
-	createDrop()
+	create()
 
 	//! demon
 	callAt(conf.CallH, conf.CallM, conf.CallS)
