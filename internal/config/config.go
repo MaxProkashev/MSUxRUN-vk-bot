@@ -15,6 +15,9 @@ const (
 
 // Config project template
 type Config struct {
+	Token string `yaml:"token"`
+	DbURL string `yaml:"db_url"`
+
 	CallH int `yaml:"call_h"`
 	CallM int `yaml:"call_m"`
 	CallS int `yaml:"call_s"`
