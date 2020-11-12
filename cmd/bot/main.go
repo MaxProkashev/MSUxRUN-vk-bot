@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"math/rand"
 	"msuxrun-bot/internal/config"
 	"msuxrun-bot/internal/db"
 	"msuxrun-bot/internal/logs"
@@ -60,7 +61,7 @@ func main() {
 	createDrop()
 
 	//! demon
-	callAt(3, 25, 0, wg)
+	callAt(conf.CallH, conf.CallM, conf.CallS)
 
 	// ? create new vk api
 	vk = api.NewVK(conf.Token)
@@ -99,9 +100,9 @@ func main() {
 	wg.Wait()
 }
 
-func callAt(h, m, s int, wg *sync.WaitGroup) {
+func callAt(h, m, s int) {
 	duration := durFirstSleepy(h, m, s)
-
+	//fmt.Println(duration)
 	wg.Add(1)
 	go func(wg *sync.WaitGroup) {
 		defer wg.Done()
@@ -113,7 +114,6 @@ func callAt(h, m, s int, wg *sync.WaitGroup) {
 				defer wg.Done()
 
 				mu.Lock()
-				logs.Warn("start notice")
 				postNot()
 				mu.Unlock()
 			}(wg)
@@ -122,8 +122,44 @@ func callAt(h, m, s int, wg *sync.WaitGroup) {
 	}(wg)
 }
 
+func postNot() {
+	var msg string
+	weekday := time.Now().Weekday().String()
+	logs.WarnNot(time.Now().Format(time.RFC3339))
+	rand.Seed(time.Now().UnixNano())
+
+	var randNot = func() string {
+		return conf.MessageNotice[rand.Intn(len(conf.MessageNotice))]
+	}
+
+	ch := make(chan *db.User, 1)
+	go db.GetAllUser(ch)
+
+	for user := range ch {
+		user.ParseSign(conf.CountTrain)
+
+	LOOP:
+		for i, tr := range user.Train {
+			if tr == true && conf.MainKeyboard[i].NotDay == weekday {
+				b := params.NewMessagesSendBuilder()
+				b.RandomID(0)
+				b.PeerID(user.ID)
+				msg = fmt.Sprintf(randNot(), conf.MainKeyboard[i].Label)
+				b.Message(msg)
+
+				_, err := vk.MessagesSend(b.Params)
+				if err != nil {
+					logs.Warn("can`t send message. Reason: %s", err.Error())
+				}
+				break LOOP
+			}
+		}
+	}
+}
+
 // StandartMessageEvent from user
 var standartMessageEvent = func(_ context.Context, obj events.MessageNewObject) {
+	var msg string
 	logs.Mess("user[%d] %s", obj.Message.FromID, obj.Message.Text)
 	user := &db.User{
 		Text: obj.Message.Text,
@@ -141,10 +177,14 @@ var standartMessageEvent = func(_ context.Context, obj events.MessageNewObject) 
 			user.Train[i] = !user.Train[i]
 			user.SetTrain(conf.CountTrain)
 			if user.Train[i] {
-				b.Message(conf.MessageSignUp + conf.MainKeyboard[i].Label)
+				msg = conf.MessageSignUp + conf.MainKeyboard[i].Label
+				if i == 0 {
+					msg += conf.MessageSpecFor0
+				}
 			} else {
-				b.Message(conf.MessageSignOut)
+				msg = conf.MessageSignOut
 			}
+			b.Message(msg)
 			b.Keyboard(renderKey(user.Train).ToJSON())
 
 			_, err := vk.MessagesSend(b.Params)
@@ -159,20 +199,15 @@ var standartMessageEvent = func(_ context.Context, obj events.MessageNewObject) 
 	// проверка остальных действий
 	switch user.Text {
 	case conf.Schedule:
-		b.Message(conf.Schedule)
+		msg = conf.Schedule
 		b.Attachment(conf.SchPhoto)
 	case conf.MyTrain:
-		b.Message(userTrain(user.Train))
-	case "notice":
-		mu.Lock()
-		logs.Warn("start notice")
-		postNot()
-		mu.Unlock()
-		b.Message(conf.MessageDefault)
+		msg = userTrain(user.Train)
 	default:
-		b.Message(conf.MessageDefault)
+		msg = conf.MessageDefault
 	}
 
+	b.Message(msg)
 	_, err := vk.MessagesSend(b.Params)
 	if err != nil {
 		logs.Warn("can`t send message. Reason: %s", err.Error())
@@ -233,14 +268,4 @@ func userTrain(tr []bool) string {
 		return conf.MessageNonTrain
 	}
 	return str
-}
-
-func postNot() {
-	ch := make(chan *db.User, 1)
-	go db.GetAllUser(ch)
-
-	for user := range ch {
-		user.ParseSign(conf.CountTrain)
-		fmt.Println(user)
-	}
 }

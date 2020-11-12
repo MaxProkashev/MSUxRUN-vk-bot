@@ -79,6 +79,11 @@ func Warn(format string, v ...interface{}) {
 	WarningLogger.Printf("%s", fmt.Sprintf(format, v...))
 }
 
+// WarnNot when start not
+func WarnNot(t string) {
+	WarningLogger.Printf("[WARNING]|| %s at %s", "start notice", t)
+}
+
 // DBWarn db job in WARN log with comment
 func DBWarn(format string, v ...interface{}) {
 	WarningLogger.Printf("%s|| %s", dbwarn, fmt.Sprintf(format, v...))
