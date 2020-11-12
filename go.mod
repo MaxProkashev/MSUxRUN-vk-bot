@@ -1,4 +1,4 @@
-module msuxrun-bot
+module msu-vk-bot
 
 go 1.15
 

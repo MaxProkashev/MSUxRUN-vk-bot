@@ -1,1 +1,1 @@
-web: cmd/bot
+web: bin/msu-vk-bot

@@ -3,7 +3,7 @@ package db
 import (
 	"database/sql"
 	"fmt"
-	"msuxrun-bot/internal/logs"
+	"msu-vk-bot/internal/logs"
 	"os"
 
 	_ "github.com/lib/pq" // driver for postgreSQL
