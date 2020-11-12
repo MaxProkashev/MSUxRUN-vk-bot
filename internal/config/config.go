@@ -1,7 +1,6 @@
 package config
 
 import (
-	"database/sql"
 	"io/ioutil"
 	"msuxrun-bot/internal/logs"
 	"os"
@@ -11,59 +10,52 @@ import (
 )
 
 const (
-	dirConfig = "./config.yaml"
+	dirPr = "./config.yaml" // directory of the project configuration
 )
 
-// Config project
+// Config project template
 type Config struct {
-	Token   string `yaml:"token"`
-	PORT    string `yaml:"std_port"`
-	DBURL   string `yaml:"db_url"`
-	GroupID int    `yaml:"group_id"`
+	Token string `yaml:"token"`
+	DbURL string `yaml:"db_url"`
 
-	MainKyeboard []struct {
-		Row []struct {
-			Label   string `yaml:"label"`
-			Payload string `yaml:"payload"`
-			Color   string `yaml:"color"`
-		} `yaml:"row"`
-	} `yaml:"main_kyeboard"`
+	// preset message
+	MessageSignUp   string `yaml:"message_sign_up"`
+	MessageSignOut  string `yaml:"message_sign_out"`
+	MessageDefault  string `yaml:"message_default"`
+	MessageNonTrain string `yaml:"message_non_train"`
 
-	DB *sql.DB
+	// keyboard
+	CountTrain   int `yaml:"count_train"` // count training
+	MainKeyboard []struct {
+		Label string `yaml:"label"`
+		Coach string `yaml:"coach"`
+	} `yaml:"main_keyboard"`
+	Schedule string `yaml:"schedule"` // расписание
+	SchPhoto string `yaml:"sch_photo"`
+	MyTrain  string `yaml:"my_train"`
 }
 
-// OpenDB heroku
-func (c *Config) OpenDB() Config {
-	db, err := sql.Open("postgres", c.DBURL)
-	if err != nil {
-		logs.ErrorLogger.Printf("could`t open db")
-		os.Exit(1)
-	}
-	logs.Succes("open db")
-	c.DB = db
-	return *c
-}
-
-func errLog(err error) {
-	logs.ErrorLogger.Printf("%s", err)
+// error unnamed func
+var errLog = func(err error) {
+	logs.Err("%s", err)
 	os.Exit(1)
 }
 
 // GetProjectConfig from dir config
 // if err exit with status 1
-func GetProjectConfig() (config Config) {
+func GetProjectConfig() (c *Config) {
 	// read file
-	file, err := ioutil.ReadFile(dirConfig)
+	file, err := ioutil.ReadFile(dirPr)
 	if err != nil {
 		errLog(err)
 	}
 	// unmarshal file
-	err = yaml.Unmarshal(file, &config)
+	err = yaml.Unmarshal(file, &c)
 	if err != nil {
 		errLog(err)
 	}
 
-	logs.Succes("get config")
+	logs.Succes("get project configuration from %s", dirPr)
 
-	return config
+	return c
 }

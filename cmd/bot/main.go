@@ -2,10 +2,14 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"msuxrun-bot/internal/config"
 	"msuxrun-bot/internal/db"
 	"msuxrun-bot/internal/logs"
 	"os"
+	"runtime"
+	"sync"
+	"time"
 
 	"github.com/SevereCloud/vksdk/v2/api"
 	"github.com/SevereCloud/vksdk/v2/api/params"
@@ -14,302 +18,229 @@ import (
 	"github.com/SevereCloud/vksdk/v2/object"
 )
 
-var val int
+var (
+	// only re-create table
+	create = func() {
+		db.CreateUserTable()
+	}
+	// first drop then create table
+	createDrop = func() {
+		db.DropUserTable()
+		db.CreateUserTable()
+	}
+	// time for sleep when first call demon
+	durFirstSleepy = func(h, m, s int) time.Duration {
+		now := time.Now()
+		t := time.Date(now.Year(), now.Month(), now.Day(), h, m, s, 0, msk)
+		if t.Before(now) {
+			t = t.Add(time.Hour * 24)
+		}
+		return t.Sub(time.Now())
+	}
+
+	wg            = &sync.WaitGroup{}
+	mu            = &sync.Mutex{}
+	msk           = time.FixedZone("UTC+3", +3*60*60)
+	vk            *api.VK
+	conf          *config.Config
+	goroutinesNum = 8
+)
 
 func main() {
+	runtime.GOMAXPROCS(0)
+
 	//! start loggers
 	logs.InitLoggers()
-
-	//! get configuration for bot and db
-	conf := config.GetProjectConfig()
-	db.DB = conf.OpenDB().DB
+	//! get configuration for project
+	conf = config.GetProjectConfig()
+	//! init DB for bot
+	db.InitDB(conf.DbURL)
 
 	//? create bot_users table
-	db.DropTable("bot_users")
-	db.CreateUserTable()
+	createDrop()
 
-	//? create new vk api
-	vk := api.NewVK(conf.Token)
+	//! demon
+	callAt(3, 25, 0, wg)
 
-	//? get information about the group
-	group, err := vk.GroupsGetByID(nil)
+	// ? create new vk api
+	vk = api.NewVK(conf.Token)
+
+	// ? get information about the group
+	groups, err := vk.GroupsGetByID(nil)
 	if err != nil {
-		logs.ErrorLogger.Printf("can`t get info about group")
+		logs.Err("can`t get info about group")
 		os.Exit(1)
 	}
-	for i, gr := range group {
-		logs.Succes("group[%d].id = %d", i, gr.ID)
+	for _, gr := range groups {
+		logs.Succes("group[%d] %s", gr.ID, gr.Name)
+
+		wg.Add(1)
+		go func(gr object.GroupsGroup, waiter *sync.WaitGroup) {
+			defer waiter.Done()
+			//? initializing Long Poll in conf.GroupID
+			lp, err := longpoll.NewLongPoll(vk, gr.ID)
+			if err != nil {
+				logs.Err("could`t init long poll in %d. Reason: %s", gr.ID, err.Error())
+				os.Exit(1)
+			}
+
+			//? reg new message event
+			lp.MessageNew(standartMessageEvent)
+
+			//? run n bot Long Poll
+			logs.Succes("group[%d] start long poll", lp.GroupID)
+			if err := lp.Run(); err != nil {
+				logs.Err("could`t start long poll in %d. Reason: %s", gr.ID, err.Error())
+				os.Exit(1)
+			}
+		}(gr, wg)
 	}
 
-	//? initializing Long Poll in conf.GroupID
-	lp, err := longpoll.NewLongPoll(vk, conf.GroupID)
-	if err != nil {
-		logs.ErrorLogger.Printf("could`t init long poll in group_id = %d", conf.GroupID)
-		os.Exit(1)
-	}
-
-	//? new message event
-	lp.MessageNew(func(_ context.Context, obj events.MessageNewObject) {
-		logs.Mess("from: %d, text: %s, payload: %s",
-			obj.Message.FromID,
-			obj.Message.Text,
-			obj.Message.Payload,
-		)
-		//? get info about user
-		user := &db.User{
-			ID: obj.Message.FromID,
-		}
-		user = user.CheckUserByID()
-
-		stdKEY := createUserKey(user, conf)
-		b := params.NewMessagesSendBuilder()
-		switch obj.Message.Text {
-		case "Лонгран ПН 19:00":
-			val = db.GetInt(user.ID, "mo")
-			if val == 0 {
-				b.Message("Ты записан на тренировку в понедельник в 19:00")
-				db.SetInt(user.ID, "mo", 1)
-				user.MO = 1
-			} else {
-				b.Message("Ты отписался от тренировки")
-				db.SetInt(user.ID, "mo", 0)
-				user.MO = 0
-			}
-			b.RandomID(0)
-			b.PeerID(obj.Message.PeerID)
-			b.Keyboard(createUserKey(user, conf).ToJSON())
-		case "Общая ВТ 19:30":
-			val = db.GetInt(user.ID, "tu")
-			if val == 0 {
-				b.Message("Ты записан на тренировку во вторник в 19:30")
-				db.SetInt(user.ID, "tu", 1)
-				user.TU = 1
-			} else {
-				b.Message("Ты отписался от тренировки")
-				db.SetInt(user.ID, "tu", 0)
-				user.TU = 0
-			}
-			b.RandomID(0)
-			b.PeerID(obj.Message.PeerID)
-			b.Keyboard(createUserKey(user, conf).ToJSON())
-		case "Лонгран СР 19:00":
-			val = db.GetInt(user.ID, "we")
-			if val == 0 {
-				b.Message("Ты записан на тренировку в среду в 19:00")
-				db.SetInt(user.ID, "we", 1)
-				user.WE = 1
-			} else {
-				b.Message("Ты отписался от тренировки")
-				db.SetInt(user.ID, "we", 0)
-				user.WE = 0
-			}
-			b.RandomID(0)
-			b.PeerID(obj.Message.PeerID)
-			b.Keyboard(createUserKey(user, conf).ToJSON())
-		case "Общая ЧТ 19:30":
-			val = db.GetInt(user.ID, "th")
-			if val == 0 {
-				b.Message("Ты записан на тренировку в четверг в 19:30")
-				db.SetInt(user.ID, "th", 1)
-				user.TH = 1
-			} else {
-				b.Message("Ты отписался от тренировки")
-				db.SetInt(user.ID, "th", 0)
-				user.TH = 0
-			}
-			b.RandomID(0)
-			b.PeerID(obj.Message.PeerID)
-			b.Keyboard(createUserKey(user, conf).ToJSON())
-		case "Лонгран ПТ 19:00":
-			val = db.GetInt(user.ID, "fr")
-			if val == 0 {
-				b.Message("Ты записан на тренировку в пятницу в 19:00")
-				db.SetInt(user.ID, "fr", 1)
-				user.FR = 1
-			} else {
-				b.Message("Ты отписался от тренировки")
-				db.SetInt(user.ID, "fr", 0)
-				user.FR = 0
-			}
-			b.RandomID(0)
-			b.PeerID(obj.Message.PeerID)
-			b.Keyboard(createUserKey(user, conf).ToJSON())
-		case "Лонгран ВС 9:00(9:20)":
-			val = db.GetInt(user.ID, "su")
-			if val == 0 {
-				b.Message("Ты записан на тренировку в воскресенье в 19:00")
-				db.SetInt(user.ID, "su", 1)
-				user.SU = 1
-			} else {
-				b.Message("Ты отписался от тренировки")
-				db.SetInt(user.ID, "su", 0)
-				user.SU = 0
-			}
-			b.RandomID(0)
-			b.PeerID(obj.Message.PeerID)
-			b.Keyboard(createUserKey(user, conf).ToJSON())
-		case "Расписание":
-			b.Message("Вот расписание на неделю")
-			b.Attachment("photo-186543814_457239215")
-			b.RandomID(0)
-			b.PeerID(obj.Message.PeerID)
-			b.Keyboard(stdKEY.ToJSON())
-		case "Мои тренировки":
-			b.RandomID(0)
-			b.PeerID(obj.Message.PeerID)
-			b.Keyboard(stdKEY.ToJSON())
-			str := ""
-			if user.MO == 1 {
-				str += "ПН 19:00\nЛонгран\nТренеры: Сергей Павлов, Андрей Королев\n\n"
-			}
-			if user.TU == 1 {
-				str += "ВТ 19:30\nОбщая тренировка\nТренер: Артем Орлов\n\n"
-			}
-			if user.WE == 1 {
-				str += "СР 19:00\nЛонгран\nТренеры: Сергей Павлов, Андрей Королев\n\n"
-			}
-			if user.TH == 1 {
-				str += "ЧТ 19:30\nОбщая тренировка\nТренер: Артём Орлов\n\n"
-			}
-			if user.FR == 1 {
-				str += "ПТ 19:00\nЛонгран\nТренеры: Сергей Павлов, Андрей Королев\n\n"
-			}
-			if user.SU == 1 {
-				str += "ВС 9:00(9:20)\nЛонгран\nТренеры: Сухайли Хотамов\n\n"
-			}
-			if str == "" {
-				str += "У тебя еще нет ни одной тренировки"
-			}
-			b.Message(str)
-		default:
-			//? create default message to user
-			b.Message("Лучше пообщаемся на тренировке!")
-			b.RandomID(0)
-			b.PeerID(obj.Message.PeerID)
-			b.Keyboard(stdKEY.ToJSON())
-		}
-
-		_, err := vk.MessagesSend(b.Params)
-		if err != nil {
-			logs.Warn("can`t send message. Reason: %s", err.Error())
-		}
-
-	})
-
-	//? run bot Long Poll
-	logs.Succes("start long poll with gr_id=%d, serv=%s, wait=%d", lp.GroupID, lp.Server, lp.Wait)
-	if err := lp.Run(); err != nil {
-		logs.ErrorLogger.Printf("could`t start long poll")
-		os.Exit(1)
-	}
+	wg.Wait()
 }
 
-func createUserKey(user *db.User, conf config.Config) (stdKEY *object.MessagesKeyboard) {
-	//? create standart hotkey
-	stdKEY = object.NewMessagesKeyboard(false)
+func callAt(h, m, s int, wg *sync.WaitGroup) {
+	duration := durFirstSleepy(h, m, s)
 
-	stdKEY.AddRow()
+	wg.Add(1)
+	go func(wg *sync.WaitGroup) {
+		defer wg.Done()
 
-	if user.MO == 1 {
-		stdKEY.AddTextButton(
-			"Лонгран ПН 19:00",
-			"mo",
-			"positive",
-		)
-	} else {
-		stdKEY.AddTextButton(
-			"Лонгран ПН 19:00",
-			"mo",
-			"secondary",
+		time.Sleep(duration) // засыпаем до первого вызова
+		for {
+			wg.Add(1)
+			go func(wg *sync.WaitGroup) {
+				defer wg.Done()
+
+				mu.Lock()
+				logs.Warn("start notice")
+				postNot()
+				mu.Unlock()
+			}(wg)
+			time.Sleep(time.Hour * 24) // засыпекм до следующего вызова
+		}
+	}(wg)
+}
+
+// StandartMessageEvent from user
+var standartMessageEvent = func(_ context.Context, obj events.MessageNewObject) {
+	logs.Mess("user[%d] %s", obj.Message.FromID, obj.Message.Text)
+	user := &db.User{
+		Text: obj.Message.Text,
+	}
+
+	user.GetUser(obj.Message.FromID) // id,sign
+	user.ParseSign(conf.CountTrain)  // train: [true false true false false false]
+
+	b := params.NewMessagesSendBuilder()
+	b.RandomID(0)
+	b.PeerID(obj.Message.PeerID)
+	// проверка кнопок записи на тренировку
+	for i, fl := range conf.MainKeyboard {
+		if user.Text == fl.Label {
+			user.Train[i] = !user.Train[i]
+			user.SetTrain(conf.CountTrain)
+			if user.Train[i] {
+				b.Message(conf.MessageSignUp + conf.MainKeyboard[i].Label)
+			} else {
+				b.Message(conf.MessageSignOut)
+			}
+			b.Keyboard(renderKey(user.Train).ToJSON())
+
+			_, err := vk.MessagesSend(b.Params)
+			if err != nil {
+				logs.Warn("can`t send message. Reason: %s", err.Error())
+			}
+			return
+		}
+	}
+	b.Keyboard(renderKey(user.Train).ToJSON())
+
+	// проверка остальных действий
+	switch user.Text {
+	case conf.Schedule:
+		b.Message(conf.Schedule)
+		b.Attachment(conf.SchPhoto)
+	case conf.MyTrain:
+		b.Message(userTrain(user.Train))
+	case "notice":
+		mu.Lock()
+		logs.Warn("start notice")
+		postNot()
+		mu.Unlock()
+		b.Message(conf.MessageDefault)
+	default:
+		b.Message(conf.MessageDefault)
+	}
+
+	_, err := vk.MessagesSend(b.Params)
+	if err != nil {
+		logs.Warn("can`t send message. Reason: %s", err.Error())
+	}
+	return
+}
+
+func renderKey(tr []bool) *object.MessagesKeyboard {
+	var color string
+
+	key := object.NewMessagesKeyboard(true)
+	for i, fl := range tr {
+		if i%2 == 0 {
+			key.AddRow()
+		}
+		switch fl {
+		case true:
+			color = object.ButtonGreen
+		case false:
+			color = object.ButtonWhite
+		}
+		key.AddTextButton(
+			conf.MainKeyboard[i].Label,
+			"",
+			color,
 		)
 	}
 
-	if user.TU == 1 {
-		stdKEY.AddTextButton(
-			"Общая ВТ 19:30",
-			"tu",
-			"positive",
-		)
-	} else {
-		stdKEY.AddTextButton(
-			"Общая ВТ 19:30",
-			"tu",
-			"secondary",
-		)
-	}
-
-	stdKEY.AddRow()
-
-	if user.WE == 1 {
-		stdKEY.AddTextButton(
-			"Лонгран СР 19:00",
-			"we",
-			"positive",
-		)
-	} else {
-		stdKEY.AddTextButton(
-			"Лонгран СР 19:00",
-			"we",
-			"secondary",
-		)
-	}
-
-	if user.TH == 1 {
-		stdKEY.AddTextButton(
-			"Общая ЧТ 19:30",
-			"th",
-			"positive",
-		)
-	} else {
-		stdKEY.AddTextButton(
-			"Общая ЧТ 19:30",
-			"th",
-			"secondary",
-		)
-	}
-
-	stdKEY.AddRow()
-
-	if user.FR == 1 {
-		stdKEY.AddTextButton(
-			"Лонгран ПТ 19:00",
-			"fr",
-			"positive",
-		)
-	} else {
-		stdKEY.AddTextButton(
-			"Лонгран ПТ 19:00",
-			"fr",
-			"secondary",
-		)
-	}
-
-	if user.SU == 1 {
-		stdKEY.AddTextButton(
-			"Лонгран ВС 9:00(9:20)",
-			"su",
-			"positive",
-		)
-	} else {
-		stdKEY.AddTextButton(
-			"Лонгран ВС 9:00(9:20)",
-			"su",
-			"secondary",
-		)
-	}
-
-	stdKEY.AddRow()
-	stdKEY.AddTextButton(
-		"Расписание",
-		"Расписание",
-		"primary",
+	key.AddRow()
+	key.AddTextButton(
+		conf.Schedule,
+		"",
+		object.ButtonBlue,
+	)
+	key.AddRow()
+	key.AddTextButton(
+		conf.MyTrain,
+		"",
+		object.ButtonBlue,
 	)
 
-	stdKEY.AddRow()
-	stdKEY.AddTextButton(
-		"Мои тренировки",
-		"Мои тренировки",
-		"primary",
-	)
-	return stdKEY
+	return key
+}
+
+func userTrain(tr []bool) string {
+	str := ""
+
+	for i, fl := range tr {
+		if fl {
+			str += fmt.Sprintf("%s%s",
+				conf.MainKeyboard[i].Label,
+				conf.MainKeyboard[i].Coach,
+			)
+		}
+	}
+
+	if str == "" {
+		return conf.MessageNonTrain
+	}
+	return str
+}
+
+func postNot() {
+	ch := make(chan *db.User, 1)
+	go db.GetAllUser(ch)
+
+	for user := range ch {
+		user.ParseSign(conf.CountTrain)
+		fmt.Println(user)
+	}
 }

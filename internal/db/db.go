@@ -5,126 +5,178 @@ import (
 	"fmt"
 	"msuxrun-bot/internal/logs"
 	"os"
-	"strconv"
 
-	_ "github.com/lib/pq" // ..
+	_ "github.com/lib/pq" // driver for postgreSQL
 )
 
-// DB for bot
-var DB *sql.DB
-
-// User bot
+// User of bot
 type User struct {
-	ID int
+	ID   int
+	Sign int
 
-	MO int //1
-	TU int //2
-	WE int //3
-	TH int //4
-	FR int //5
-	SU int //6
+	Text  string
+	Train []bool
 }
 
-// CreateUserTable - bot_users (id INT PRIMARY KEY,)
+func (user *User) String() string {
+	return fmt.Sprintf("id: %d\nsign: %d\ntext: %s\ntrain: %v",
+		user.ID,
+		user.Sign,
+		user.Text,
+		user.Train,
+	)
+}
+
+// DB for bot
+var (
+	DB *sql.DB
+
+	nameTable  = "bot_users"
+	createUser = func(id int) {
+		str := fmt.Sprintf("INSERT INTO %s (id,sign) VALUES (%d,0);",
+			nameTable,
+			id,
+		)
+		_, err := DB.Exec(str)
+		if err != nil {
+			logs.DBErr("could`t not create new user. Reason: %s", err.Error())
+			os.Exit(1)
+		}
+	}
+)
+
+// InitDB database heroku from url
+func InitDB(url string) {
+	db, err := sql.Open("postgres", url)
+	if err != nil {
+		logs.DBErr("could`t not init database by url %s. Reason: %s", url, err.Error())
+		os.Exit(1)
+	}
+	DB = db
+
+	logs.Succes("init database postgres")
+}
+
+// CreateUserTable table bot_users (id INT PRIMARY KEY, sign INT)
 func CreateUserTable() {
-	str := fmt.Sprintf("CREATE TABLE IF NOT EXISTS %s (%s INT PRIMARY KEY, %s INT, %s INT, %s INT, %s INT, %s INT, %s INT);",
-		"bot_users",
+	str := fmt.Sprintf("CREATE TABLE IF NOT EXISTS %s (%s INT PRIMARY KEY, %s INT);",
+		nameTable,
 		"id",
-		"mo",
-		"tu",
-		"we",
-		"th",
-		"fr",
-		"su",
+		"sign",
 	)
 	_, err := DB.Exec(str)
 	if err != nil {
-		logs.DBErr("could`t create main table")
+		logs.DBErr("could`t create %s table. Reason: %s", nameTable, err.Error())
 		os.Exit(1)
+	}
+
+	logs.DB("CREATE %s TABLE", nameTable)
+}
+
+// DropUserTable bot_users
+func DropUserTable() {
+	_, err := DB.Exec("DROP TABLE " + nameTable + ";")
+	if err != nil {
+		logs.DBWarn("could`t drop %s table. Reason: %s", nameTable, err.Error())
+		//os.Exit(1)
 	} else {
-		logs.DB("create user table")
+		logs.DB("DROP %s TABLE", nameTable)
 	}
 }
 
-// DropTable by name
-func DropTable(name string) {
-	_, err := DB.Exec("DROP TABLE " + name + ";")
-	if err != nil {
-		logs.DBErr("could`t not drop %s table. Reason: %s", name, err.Error())
+//! User logic
+
+// GetUser get user by init id
+func (user *User) GetUser(id int) {
+	user.ID = id
+
+	str := fmt.Sprintf("SELECT * FROM %s WHERE id = %d;",
+		nameTable,
+		id,
+	)
+
+	var fl int
+	err := DB.QueryRow(str).Scan(&id, &fl)
+	switch {
+	case err == sql.ErrNoRows:
+		logs.DB("NEW user[%d]", user.ID)
+		createUser(user.ID)
+	case err != nil:
+		logs.DBErr("could`t get query row. Reason: %s", err.Error())
 		os.Exit(1)
-	} else {
-		logs.DB("drop %s table", name)
+	default:
+		logs.DB("user[%d] select", user.ID)
+		user.Sign = fl
 	}
 }
 
-func checkID(userID int) bool {
-	rows, err := DB.Query("SELECT id FROM bot_users WHERE id = " + strconv.Itoa(userID) + ";")
-	defer rows.Close()
+// ParseSign to slice bool len count
+func (user *User) ParseSign(count int) {
+	fl := make([]bool, count)
 
-	if err != nil {
-		logs.DBErr("could`t not select id. Reason: %s", err.Error())
-		os.Exit(1)
-	} else {
-		for rows.Next() {
-			return true
+	for i := 0; i < count; i++ {
+		if user.Sign&1 == 1 {
+			fl[i] = true
+		} else {
+			fl[i] = false
 		}
-		return false
+		user.Sign = user.Sign >> 1
 	}
-	return false
+
+	user.Train = fl
 }
 
-func createNewUser(userID int) {
-	_, err := DB.Exec("INSERT INTO bot_users (id,mo,tu,we,th,fr,su) VALUES (" + strconv.Itoa(userID) + ", 0, 0, 0, 0 ,0 ,0);")
-	if err != nil {
-		logs.DBErr("could`t not init new user. Reason: %s", err.Error())
-		os.Exit(1)
-	} else {
-		logs.DB("new user init id = %d", userID)
-	}
-}
+// SetTrain set new slice train
+func (user *User) SetTrain(count int) {
+	newSign := 0
 
-// SetInt ..
-func SetInt(userID int, column string, value int) {
-	_, err := DB.Exec("UPDATE bot_users SET " + column + " = " + strconv.Itoa(value) + " WHERE id = " + strconv.Itoa(userID) + ";")
-
-	if err != nil {
-		logs.DBErr("could`t not update %d. Reason: %s", userID, err.Error())
-		os.Exit(1)
-	}
-}
-
-// GetInt ..
-func GetInt(userID int, column string) (value int) {
-	rows, err := DB.Query("SELECT " + column + " FROM bot_users WHERE id = " + strconv.Itoa(userID) + ";")
-	defer rows.Close()
-	if err != nil {
-		logs.DBErr("could`t not select %d. Reason: %s", userID, err.Error())
-		os.Exit(1)
-	} else {
-		for rows.Next() {
-			rows.Scan(&value)
+	for i := count - 1; i >= 0; i-- {
+		if user.Train[i] {
+			newSign = newSign<<1 + 1
+		} else {
+			newSign = newSign << 1
 		}
 	}
-	return value
+
+	str := fmt.Sprintf("UPDATE %s SET sign = %d WHERE id = %d;",
+		nameTable,
+		newSign,
+		user.ID,
+	)
+	_, err := DB.Exec(str)
+	if err != nil {
+		logs.DBErr("could`t not update %d. Reason: %s", user.ID, err.Error())
+		os.Exit(1)
+	}
+	logs.DB("user[%d] update", user.ID)
 }
 
-func getFullUser(userID int) *User {
-	return &User{
-		ID: userID,
-		MO: GetInt(userID, "mo"),
-		TU: GetInt(userID, "tu"),
-		WE: GetInt(userID, "we"),
-		TH: GetInt(userID, "th"),
-		FR: GetInt(userID, "fr"),
-		SU: GetInt(userID, "su"),
-	}
-}
+// GetAllUser get all user from table and send to out ch
+func GetAllUser(out chan<- *User) {
+	defer close(out)
 
-// CheckUserByID if not exist create, and return user template
-func (user *User) CheckUserByID() *User {
-	if !checkID(user.ID) {
-		createNewUser(user.ID)
-		return user
+	str := fmt.Sprintf("SELECT * FROM %s;",
+		nameTable,
+	)
+
+	rows, err := DB.Query(str)
+	defer rows.Close()
+	if err != nil {
+		logs.DBErr("could`t get query rows. Reason: %s", err.Error())
+		os.Exit(1)
 	}
-	return getFullUser(user.ID)
+
+	for rows.Next() {
+		var id int
+		var sign int
+		if err := rows.Scan(&id, &sign); err != nil {
+			logs.DBErr("could`t scan row. Reason: %s", err.Error())
+			os.Exit(1)
+		}
+		out <- &User{
+			ID:   id,
+			Sign: sign,
+		}
+	}
+
 }

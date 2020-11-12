@@ -11,6 +11,12 @@ const (
 	warn = "[WARNING] "
 	errs = "[ERROR]   "
 
+	suc    = "[SUCCES] "
+	mes    = "[MESS]   "
+	db     = "[DB]     "
+	dberr  = "[DBERR]  "
+	dbwarn = "[DBWARN] "
+
 	fileLogs = "./internal/logs/logs.log" // where save log
 )
 
@@ -30,39 +36,50 @@ func InitLoggers() {
 	if err != nil {
 		log.Fatalf("CANT START LOGGER reason: %s", err.Error())
 	}
-	InfoLogger = log.New(file, info, log.Ldate|log.Ltime|log.Lshortfile)
-	WarningLogger = log.New(file, warn, log.Ldate|log.Ltime|log.Lshortfile)
-	ErrorLogger = log.New(file, errs, log.Ldate|log.Ltime|log.Lshortfile)
+	InfoLogger = log.New(file, info, log.Ldate|log.Ltime)
+	WarningLogger = log.New(file, warn, log.Ldate|log.Ltime)
+	ErrorLogger = log.New(file, errs, log.Ldate|log.Ltime)
 
 	fmt.Fprintf(file, "----------------------------------------\n")
 }
 
+//! INFO
+
 // Succes job in INFO log with comment
 func Succes(format string, v ...interface{}) {
-	InfoLogger.Printf("[SUCCES] %s", fmt.Sprintf(format, v...))
+	InfoLogger.Printf("%s|| %s", suc, fmt.Sprintf(format, v...))
 }
 
 // Mess job in INFO log with comment
 func Mess(format string, v ...interface{}) {
-	InfoLogger.Printf("[MESS] %s", fmt.Sprintf(format, v...))
+	InfoLogger.Printf("%s|| %s", mes, fmt.Sprintf(format, v...))
 }
 
 // DB job in INFO log with comment
 func DB(format string, v ...interface{}) {
-	InfoLogger.Printf("[DB] %s", fmt.Sprintf(format, v...))
+	InfoLogger.Printf("%s|| %s", db, fmt.Sprintf(format, v...))
 }
+
+//! ERR
 
 // Err job in ERROR log with comment
 func Err(format string, v ...interface{}) {
 	ErrorLogger.Printf("%s", fmt.Sprintf(format, v...))
 }
 
-// DBErr job in ERROR log with comment
+// DBErr db job in ERROR log with comment
 func DBErr(format string, v ...interface{}) {
-	ErrorLogger.Printf("[DBERR] %s", fmt.Sprintf(format, v...))
+	ErrorLogger.Printf("%s|| %s", dberr, fmt.Sprintf(format, v...))
 }
+
+//! WARN
 
 // Warn job in WARN log with comment
 func Warn(format string, v ...interface{}) {
 	WarningLogger.Printf("%s", fmt.Sprintf(format, v...))
+}
+
+// DBWarn db job in WARN log with comment
+func DBWarn(format string, v ...interface{}) {
+	WarningLogger.Printf("%s|| %s", dbwarn, fmt.Sprintf(format, v...))
 }
