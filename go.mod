@@ -1,6 +1,6 @@
 module msu-vk-bot
 
-go 1.12
+go 1.15
 
 require (
 	github.com/SevereCloud/vksdk/v2 v2.6.1
