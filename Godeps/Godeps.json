@@ -1,0 +1,9 @@
+{
+	"ImportPath": "github.com/MaxProkashev/MSUxRUN-vk-bot",
+	"GoVersion": "go1.15",
+	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
+	"Deps": []
+}
