@@ -69,6 +69,11 @@ func main() {
 	router.Use(gin.Recovery())
 
 	router.POST("/start", start)
+	router.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
 
 	err := router.Run(":" + port)
 	if err != nil {
