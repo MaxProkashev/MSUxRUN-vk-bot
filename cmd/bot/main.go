@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"math/rand"
+	"net/http"
 	"os"
 	"runtime"
 	"sync"
@@ -12,6 +13,7 @@ import (
 	"github.com/MaxProkashev/MSUxRUN-vk-bot/internal/config"
 	"github.com/MaxProkashev/MSUxRUN-vk-bot/internal/db"
 	"github.com/MaxProkashev/MSUxRUN-vk-bot/internal/logs"
+	"github.com/gin-gonic/gin"
 
 	"github.com/SevereCloud/vksdk/v2/api"
 	"github.com/SevereCloud/vksdk/v2/api/params"
@@ -46,10 +48,42 @@ var (
 	vk            *api.VK
 	conf          *config.Config
 	goroutinesNum = 8
+	appURL        = "https://msu-vk-bot.herokuapp.com/"
 )
 
 func main() {
 	runtime.GOMAXPROCS(0)
+
+	// get port
+	port := os.Getenv("PORT")
+	if port == "" {
+		logs.Err("%s", "without port")
+		os.Exit(5)
+	}
+	// gin router for heroku
+
+	gin.SetMode(gin.ReleaseMode)
+	router := gin.New()
+	router.Use(gin.Recovery())
+
+	router.GET("/", func(c *gin.Context) {
+		defer c.Request.Body.Close()
+		logs.Succes("ticker")
+	})
+	err := router.Run(":" + port)
+	if err != nil {
+		logs.Err("Could not run router. Reason: %s", err.Error())
+	}
+	// ticker
+	go func() {
+		for range time.Tick(time.Minute) {
+			_, err := http.Get(appURL)
+			if err != nil {
+				logs.Warn("not ticker")
+				break
+			}
+		}
+	}()
 
 	//! start loggers
 	logs.InitLoggers()
