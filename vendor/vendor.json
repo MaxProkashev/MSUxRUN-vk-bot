@@ -1,0 +1,9 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [],
+	"rootPath": "github.com/MaxProkashev/MSUxRUN-vk-bot",
+	"heroku": {
+		"goVersion": "go1.6"
+	}
+}
