@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"log"
 	"math/rand"
 	"os"
 	"runtime"
@@ -65,59 +66,66 @@ func main() {
 	router := gin.New()
 	router.Use(gin.Recovery())
 
+	router.POST("/start", func(c *gin.Context) {
+		defer c.Request.Body.Close()
+		log.Println("start")
+
+		//! start loggers
+		logs.InitLoggers()
+		//! get configuration for project
+		conf = config.GetProjectConfig()
+		//! init DB for bot
+		db.InitDB(conf.DbURL)
+
+		//? create bot_users table
+		create()
+
+		//! demon
+		callAt(conf.CallH, conf.CallM, conf.CallS)
+
+		// ? create new vk api
+		vk = api.NewVK(conf.Token)
+
+		// ? get information about the group
+		groups, err := vk.GroupsGetByID(nil)
+		if err != nil {
+			logs.Err("can`t get info about group")
+			os.Exit(1)
+		}
+		for _, gr := range groups {
+			logs.Succes("group[%d] %s", gr.ID, gr.Name)
+
+			wg.Add(1)
+			go func(gr object.GroupsGroup, waiter *sync.WaitGroup) {
+				defer waiter.Done()
+				//? initializing Long Poll in conf.GroupID
+				lp, err := longpoll.NewLongPoll(vk, gr.ID)
+				if err != nil {
+					logs.Err("could`t init long poll in %d. Reason: %s", gr.ID, err.Error())
+					os.Exit(1)
+				}
+
+				//? reg new message event
+				lp.MessageNew(standartMessageEvent)
+
+				//? run n bot Long Poll
+				logs.Succes("group[%d] start long poll", lp.GroupID)
+				if err := lp.Run(); err != nil {
+					logs.Err("could`t start long poll in %d. Reason: %s", gr.ID, err.Error())
+					os.Exit(1)
+				}
+			}(gr, wg)
+		}
+
+		wg.Wait()
+
+	})
+
 	err := router.Run(":" + port)
 	if err != nil {
 		logs.Err("Could not run router. Reason: %s", err.Error())
 	}
 
-	//! start loggers
-	logs.InitLoggers()
-	//! get configuration for project
-	conf = config.GetProjectConfig()
-	//! init DB for bot
-	db.InitDB(conf.DbURL)
-
-	//? create bot_users table
-	create()
-
-	//! demon
-	callAt(conf.CallH, conf.CallM, conf.CallS)
-
-	// ? create new vk api
-	vk = api.NewVK(conf.Token)
-
-	// ? get information about the group
-	groups, err := vk.GroupsGetByID(nil)
-	if err != nil {
-		logs.Err("can`t get info about group")
-		os.Exit(1)
-	}
-	for _, gr := range groups {
-		logs.Succes("group[%d] %s", gr.ID, gr.Name)
-
-		wg.Add(1)
-		go func(gr object.GroupsGroup, waiter *sync.WaitGroup) {
-			defer waiter.Done()
-			//? initializing Long Poll in conf.GroupID
-			lp, err := longpoll.NewLongPoll(vk, gr.ID)
-			if err != nil {
-				logs.Err("could`t init long poll in %d. Reason: %s", gr.ID, err.Error())
-				os.Exit(1)
-			}
-
-			//? reg new message event
-			lp.MessageNew(standartMessageEvent)
-
-			//? run n bot Long Poll
-			logs.Succes("group[%d] start long poll", lp.GroupID)
-			if err := lp.Run(); err != nil {
-				logs.Err("could`t start long poll in %d. Reason: %s", gr.ID, err.Error())
-				os.Exit(1)
-			}
-		}(gr, wg)
-	}
-
-	wg.Wait()
 }
 
 func callAt(h, m, s int) {
