@@ -1,3 +1,6 @@
+token: "cb94de35584a6a708e8b7a6fdf9a2236bc8f8132f4bb7d4af9576aed2de4fda88bf4a3fa5221133c14709"
+db_url: "postgres://lfctjhjnlwzafu:c252b1bdf020ae07ed7528bebe8477bb64e25aa75435476a81534dcba1d985ba@ec2-34-206-252-187.compute-1.amazonaws.com:5432/d5uen4b8br5m99"
+
 call_h: 19
 call_m: 0
 call_s: 0
