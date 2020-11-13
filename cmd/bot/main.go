@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"math/rand"
-	"net/http"
 	"os"
 	"runtime"
 	"sync"
@@ -74,16 +73,6 @@ func main() {
 	if err != nil {
 		logs.Err("Could not run router. Reason: %s", err.Error())
 	}
-	// ticker
-	go func() {
-		for range time.Tick(time.Minute) {
-			_, err := http.Get(appURL)
-			if err != nil {
-				logs.Warn("not ticker")
-				break
-			}
-		}
-	}()
 
 	//! start loggers
 	logs.InitLoggers()
