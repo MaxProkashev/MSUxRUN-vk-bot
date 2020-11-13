@@ -90,7 +90,7 @@ func start(c *gin.Context) {
 	//! get configuration for project
 	conf = config.GetProjectConfig()
 	//! init DB for bot
-	db.InitDB(conf.DbURL)
+	db.InitDB(os.Getenv("DATABASE_URL"))
 
 	//? create bot_users table
 	create()
@@ -99,7 +99,7 @@ func start(c *gin.Context) {
 	callAt(conf.CallH, conf.CallM, conf.CallS)
 
 	// ? create new vk api
-	vk = api.NewVK(conf.Token)
+	vk = api.NewVK(os.Getenv("VK_TOKEN"))
 
 	// ? get information about the group
 	groups, err := vk.GroupsGetByID(nil)

@@ -32,15 +32,17 @@ var (
 // InitLoggers to project
 func InitLoggers() {
 	// If the file doesn't exist, create it or append to the file
-	file, err := os.OpenFile(fileLogs, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
-	if err != nil {
-		log.Fatalf("CANT START LOGGER reason: %s", err.Error())
-	}
-	InfoLogger = log.New(file, info, log.Ldate|log.Ltime)
-	WarningLogger = log.New(file, warn, log.Ldate|log.Ltime)
-	ErrorLogger = log.New(file, errs, log.Ldate|log.Ltime)
 
-	fmt.Fprintf(file, "----------------------------------------\n")
+	// file, err := os.OpenFile(fileLogs, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+	// if err != nil {
+	// 	log.Fatalf("CANT START LOGGER reason: %s", err.Error())
+	// }
+
+	InfoLogger = log.New(os.Stdout, info, log.Ldate|log.Ltime)
+	WarningLogger = log.New(os.Stdout, warn, log.Ldate|log.Ltime)
+	ErrorLogger = log.New(os.Stdout, errs, log.Ldate|log.Ltime)
+
+	fmt.Fprintf(os.Stdout, "----------------------------------------\n")
 }
 
 //! INFO

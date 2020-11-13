@@ -1,6 +1,3 @@
-token: "0404aebfdffa0dfe135cf2734763c453f6b1f16ee6a1292d22efde29029b743eb82ddf19e4566600b802a"
-db_url: "postgres://lfctjhjnlwzafu:c252b1bdf020ae07ed7528bebe8477bb64e25aa75435476a81534dcba1d985ba@ec2-34-206-252-187.compute-1.amazonaws.com:5432/d5uen4b8br5m99"
-
 call_h: 19
 call_m: 0
 call_s: 0
@@ -20,22 +17,22 @@ message_notice:
 
 count_train: 6
 main_keyboard:
-  - label: "🏃🏻‍♂️ Лонгран ПН 19:00"
+  - label: "🏃🏻‍♂️ 7 км ПН 19:00"
     coach: "\nТренер: Сергей Павлов\n\n"
     not_day: "Sunday"
   - label: "🏋 Общая ВТ 19:30"
     coach: "\nТренер: Артём Орлов\n\n"
     not_day: "Monday"
-  - label: "🏃🏻‍♂️ Лонгран СР 19:00"
+  - label: "🏃🏻‍♂️ 7 км СР 19:00"
     coach: "\nТренер: Сергей Павлов\n\n"
     not_day: "Tuesday"
   - label: "🏋 Общая ЧТ 19:30"
     coach: "\nТренер: Артём Орлов\n\n"
     not_day: "Wednesday"
-  - label: "🏃🏻‍♂️ Лонгран ПТ 19:00"
+  - label: "🏃🏻‍♂️ 7 км ПТ 19:00"
     coach: "\nТренер: Сергей Павлов\n\n"
     not_day: "Thursday"
-  - label: "🏃🏻‍♂️ Лонгран ВС 9:00(9:20)"
+  - label: "🏃🏻‍♂️ 16 км ВС 9:00(9:20)"
     coach: "\nТренер: Сухайли Хотамов\n\n"
     not_day: "Saturday"
 schedule: "📅 Расписание"
