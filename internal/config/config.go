@@ -2,9 +2,9 @@ package config
 
 import (
 	"io/ioutil"
-	"msu-vk-bot/internal/logs"
 	"os"
 
+	"github.com/MaxProkashev/MSUxRUN-vk-bot/internal/logs"
 	_ "github.com/lib/pq" // pq driver for database/sql
 	"gopkg.in/yaml.v3"
 )

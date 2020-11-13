@@ -1,4 +1,4 @@
-module msu-vk-bot
+module github.com/MaxProkashev/MSUxRUN-vk-bot
 
 go 1.15
 

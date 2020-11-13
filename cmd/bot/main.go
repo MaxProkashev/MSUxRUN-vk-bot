@@ -4,13 +4,14 @@ import (
 	"context"
 	"fmt"
 	"math/rand"
-	"msu-vk-bot/internal/config"
-	"msu-vk-bot/internal/db"
-	"msu-vk-bot/internal/logs"
 	"os"
 	"runtime"
 	"sync"
 	"time"
+
+	"github.com/MaxProkashev/MSUxRUN-vk-bot/internal/config"
+	"github.com/MaxProkashev/MSUxRUN-vk-bot/internal/db"
+	"github.com/MaxProkashev/MSUxRUN-vk-bot/internal/logs"
 
 	"github.com/SevereCloud/vksdk/v2/api"
 	"github.com/SevereCloud/vksdk/v2/api/params"
