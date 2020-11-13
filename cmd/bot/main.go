@@ -65,10 +65,6 @@ func main() {
 	router := gin.New()
 	router.Use(gin.Recovery())
 
-	router.GET("/", func(c *gin.Context) {
-		defer c.Request.Body.Close()
-		logs.Succes("ticker")
-	})
 	err := router.Run(":" + port)
 	if err != nil {
 		logs.Err("Could not run router. Reason: %s", err.Error())
