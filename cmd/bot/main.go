@@ -70,6 +70,9 @@ func main() {
 
 	router.POST("/start", start)
 	router.GET("/ping", func(c *gin.Context) {
+		if check == 0 {
+			start(c)
+		}
 		c.JSON(200, gin.H{
 			"message": "pong",
 		})
