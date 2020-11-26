@@ -208,6 +208,7 @@ var standartMessageEvent = func(_ context.Context, obj events.MessageNewObject) 
 	user := &db.User{
 		Text: obj.Message.Text,
 	}
+	log.Println(obj.Message)
 
 	user.GetUser(obj.Message.FromID) // id,sign
 	user.ParseSign(conf.CountTrain)  // train: [true false true false false false]
