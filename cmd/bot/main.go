@@ -208,7 +208,10 @@ var standartMessageEvent = func(_ context.Context, obj events.MessageNewObject) 
 	user := &db.User{
 		Text: obj.Message.Text,
 	}
-	log.Println(obj.Message)
+	if obj.Message.PeerID == 2000000003 {
+		//! сообщение в общем чате
+		return
+	}
 
 	user.GetUser(obj.Message.FromID) // id,sign
 	user.ParseSign(conf.CountTrain)  // train: [true false true false false false]
